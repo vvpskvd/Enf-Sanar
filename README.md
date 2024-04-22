@@ -1,6 +1,6 @@
 <p align="center">
-    <a href="https://github.com/vvpskvd/Medical-Printer/tree/main/Images">
-        <img src="https://github.com/vvpskvd/Medical-Printer/blob/main/Images/LogoImage.png" />
+    <a href="https://github.com/vvpskvd/Enf-Sanar/tree/main/Images">
+        <img src="https://github.com/vvpskvd/Enf-Sanar/blob/main/Images/LogoImage-Enf-Sanar.png" alt="Image" width="950" height="450"/>
     </a>
 </p>
 
@@ -36,7 +36,11 @@ Integrar las herramientas seleccionadas para el desarrollo de la aplicación web
 
 <h1 align="center"> Cronograma </h1>
 
-
+<p align="center">
+    <a href="https://github.com/vvpskvd/Enf-Sanar/tree/main/Images">
+        <img src="https://github.com/vvpskvd/Enf-Sanar/blob/main/Images/ImageCronograma.png" />
+    </a>
+</p>
 
 <h1 align="center"> Requerimientos Funcionales </h1>
 
