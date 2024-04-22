@@ -4,9 +4,12 @@
     </a>
 </p>
 
-<h1 align="center"> Medical Printer </h1>
-Medical Printer es un software enfocado en la generacion y modificacion de recibos se realiza en forma manual, al igual que las operaciones aritmeticas necesarias para calcular el valor a pagar, tambien para los diferentes precios segun corresponda, ya sea por el valor total de la compra o tipo de empresa.
-Por lo que se necesita un software para agilizar y simplificar el proceso de creacion de los comprobantes de pago, evitando el uso excesivo de papel y facilitando las modificaciones necesarias al momento de atencion al cliente.
+<h1 align="center"> EnfSanar </h1>
+La clínica de heridas enfSanar es un emprendimiento aún en surgimiento que necesita pasar a través de varias etapas para poder consolidarse como empresa en la ciudad de cúcuta, entre sus etapas se encuentra la necesidad de poder cumplir con su cometido de la manera más eficiente posible mejorando su infraestructura de comunicación, administración y atención. Para poder cumplir con las demandas requeridas por la clínica se ha sugerido la implementación de una plataforma web que funcione como centro administrativo y de comunicación con sus pacientes.
+
+Así mismo como la necesidad de formalizar sus servicios y consolidar sus procesos legales a través de algún comprobante generado digitalmente o físicamente. Además esta posee de un inventario que cubre las demandas de su servicio pero no es gestionado adecuadamente dentro de lo que cabe y se podrían presentar algunas pérdidas o malos tratos de insumos médicos necesarios para la correcta prestación del servicio.
+
+También hay que mencionar que al ser un servicio de citas especializadas en diferentes tipos de heridas, podría ser necesario la inclusión de las siguientes necesidades: agendamiento de citas, especificidad del tipo de herida aclarada por el cliente o por su formulación y la evaluación respectiva de los factores emergentes que determinen el precio final del servicio dado.
 
 <h1 align="center"> Desarrolladores </h1>
   <p> • Daniel Alejandro Arevalo Guecha </p>
@@ -16,57 +19,70 @@ Por lo que se necesita un software para agilizar y simplificar el proceso de cre
   <p> • Dylan Jared Bautista Sierra </p>
   <p> • David Arturo Aceros Ortiz </p>
 
-<h1 align="center"> Problema </h1>
-En muchos centros de salud se atienden diariamente de 10 a 30 clientes, los cuales
-pueden ser independientes o pertenecer a centros de salud especializados.
-Lamentablemente, un 30% de los clientes se retiran del proceso de compra debido a
-la larga espera para ser atendidos en la adquisición de sus equipos médicos.
-Es importante destacar que en "Medical Printer" se utilizan dos tipos de
-comprobantes de pago para la venta de equipos médicos: el recibo short y la
-factura.
-El recibo short es un comprobante de compra que permite solicitar el reembolso o
-cambio del equipo médico adquirido. No obstante, en el caso de compras que
-superen los $90.000, se debe generar manualmente dos recibos y completarlos a
-mano, lo que ocasiona retrasos en la entrega. Este tipo de comprobante incluye un
-encabezado, la fecha y número de recibo, detalles del pago, datos del comprador,
-firma del representante legal o encargado de cobros y observaciones adicionales.
-Por otro lado, la factura certifica transacciones comerciales o pedidos al por mayor y
-contiene el nombre, dirección, número de cédula, teléfono y correo electrónico del
-comprador, así como la firma del comprador, fecha de compra, producto/valor, firma
-del dueño de la empresa y sello de la empresa.
+<h1 align="center"> Pregunta </h1>
+¿Cómo podemos diseñar e implementar una infraestructura digital integral que optimice 
+la comunicación, administración y atención de la Clínica de Heridas EnfSanar, abordando 
+eficientemente los desafíos de formalización de servicios, gestión de inventario y agendamiento de citas especializadas?
 
-<h1 align="center"> Alcance </h1>
-El proyecto incluye el desarrollo de un software para automatizar la creación de
-comprobantes de pago, como recibos short y facturas, gestionar recibos superiores
-a compras de $90.000, calcular valores a pagar y aplicar descuentos. También
-administra datos de compradores.
-Por lo cual está enfocado a diferentes centros de salud enfocados en la creación,
-administración y organización de los distintos recibos short y facturas para la
-atención satisfactoria y eficiente con los clientes.
+<h1 align="center"> Objetivo General </h1>
+Desarrollar una aplicación web para administrar los procesos de citas e insumos de la 
+clínica de heridas EnfSanar ubicada en la ciudad de Cúcuta.
 
-<h1 align="center"> Objetivo general </h1>
-Desarrollar un software que agilice el proceso de creación de comprobantes de
-pago, como recibos, shorts y facturas.
+<h1 align="center"> Objetivo Especifico </h1>
+Determinar las fases  y requerimientos para la respectiva aplicación en citas para clínica de heridas.
+Examinar las herramientas  que le permitan seleccionar e identificar lenguajes de programación y bases 
+de datos para el desarrollo de la aplicación web.
+Integrar las herramientas seleccionadas para el desarrollo de la aplicación web.
 
-<h1 align="center"> Objetivos específicos </h1>
- <p> • Generar recibos short con su correspondiente estructura. </p>
- <p> • Generar facturas con su correspondiente estructura. </p>
- <p> • Aplicar los descuentos según corresponda. </p> 
- <p> • Calcular el subtotal de pago. </p>
- <p> • Calcular el total de pago. </p>
- <p> • Generar PDF. </p>
+<h1 align="center"> Cronograma </h1>
 
-<h1 align="center"> Requerimientos funcionales </h1>
- <p> • Generar recibos short con su correspondiente estructura. </p>
- <p> • Generar facturas con su correspondiente estructura. </p>
- <p> • Aplicar los descuentos según corresponda. </p>
- <p> • Calcular el subtotal de pago. </p>
- <p> • Calcular el total de pago. </p>
- <p> • Generar PDF. </p>
- 
-<h1 align="center"> Requerimientos no funcionales </h1>
- <p> • Mantenimiento. </p>
- <p> • Calidad. </p>
- <p> • Fiabilidad. </p>
- <p> • Usabilidad. </p>
- <p> • Intuitividad. </p>
+
+
+<h1 align="center"> Requerimientos Funcionales </h1>
+
+- Recepcionista:
+
+Generar formularios para realizar las historias clínicas.
+Ingresar y mantener los datos personales de los pacientes en los formularios.
+Abrir formularios para nuevos pacientes.
+Realizar notificaciones a los pacientes a través de correo electrónico sobre citas, recordatorios o información relevante.
+Registrar la valoración del servicio.
+
+- Enfermería:
+
+Registrar la valoración de heridas en los formularios de historias clínicas.
+Mantener actualizados los registros de valoración de heridas. 
+
+- Médico:
+
+Ordenar citas para pacientes.
+Emitir autorizaciones para procedimientos médicos, según sea necesario.
+Acceder y actualizar los formularios de historias clínicas.
+Generar un resumen de la historia clínica, consentimiento informado y citas programadas.
+
+- Funcionalidades compartidas:
+
+Optimizar la vía de atención al cliente mediante el ordenamiento eficiente de citas.
+Implementar un sistema de roles para los pacientes/clientes, recepcionista, médico y enfermería.
+Crear un formulario de consentimiento informado que pueda ser accedido y firmado digitalmente por los pacientes.
+Mantener un calendario general accesible para la recepcionista, la enfermería y el médico, que muestre citas programadas y disponibilidad.
+
+<h1 align="center">Requerimientos No Funcionales </h1>
+
+- Seguridad:
+El sistema debe cumplir con estándares de seguridad para proteger la información médica confidencial de los pacientes.
+Debe contar con medidas de autenticación y autorización robustas para garantizar que solo personal autorizado pueda acceder a la información del paciente.
+
+- Rendimiento:
+El sistema debe ser capaz de manejar una carga de trabajo considerable, con tiempos de respuesta aceptables incluso en momentos de alta demanda.
+Los formularios y registros deben cargar rápidamente, garantizando una experiencia de usuario fluida.
+
+- Mantenibilidad:
+El sistema debe ser fácil de mantener con código bien documentado y modularidad para facilitar cambios futuros y correcciones de errores.
+Debe permitir la integración de nuevas funcionalidades y la expansión del sistema según sea necesario.
+
+- Disponibilidad:
+El sistema debe estar disponible durante las horas de trabajo programadas, con un tiempo de inactividad mínimo planificado para mantenimiento.
+Debe contar con medidas de respaldo y recuperación ante desastres para garantizar la continuidad del servicio en caso de fallos o interrupciones.
+
+
