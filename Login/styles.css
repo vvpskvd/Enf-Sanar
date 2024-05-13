@@ -9,26 +9,38 @@ body {
 /*fondo y formulario*/
 .formulario {
     background: linear-gradient(to center, #24c966, #2d8344);
-    padding-top: 290px;
+    padding-top: 190px;
+}
+
+/*logo*/
+.imageLogo {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    content: center;
 }
 
 /*titulo*/
 .titulo_log {
-    background-color: black;
+    background-color: white;
     width: 400px;
     padding-top: 12px;
     padding-bottom: 10px;
     font-size: 20px;
-    color: white;
+    color: black;
     text-align: center;
     font-weight: bold;
     border-radius: 15px;
 }
 
+/*titulo 2*/
+.titulo_titulo_log {
+    background-color:red;
+}
+
 /*formulario y su diseño*/
 .formulario_log {
-    background-color: black;
-    color:white;
+    background-color: white;
     width: 400px;
     padding: 30px;
     border-radius: 15px;
@@ -37,7 +49,7 @@ body {
 /*diseño general*/
 .textos_log {
     display: inline-block;
-    color: white;
+    color: black;
     width: 100px;
     text-align: center;
     padding-top: 10px;
@@ -46,18 +58,18 @@ body {
 
 /*diseño general*/
 .inputs_log {
-    border-bottom: 1px solid white;
-    border-top: 0.1px solid black;
-    border-left: 0.1px solid black;;
-    border-right: 0.1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 0.1px solid white;
+    border-left: 0.1px solid white;;
+    border-right: 0.1px solid white;
     padding: 5px;
     font-size: 16px;
     width: 100%;
     background-color: transparent; 
-    color: #f5f6f7; 
+    color: black; 
 }
 
-/*diseño general*/
+/*diseño btn Ingresar*/
 .btn_log {
     background-color: #4CAF50;
     color: white;
@@ -72,7 +84,7 @@ body {
     border-radius: 10px;
 }
 
-/*diseño general*/
+/*diseño btn Cancelar*/
 .btn_cancelar {
     background-color: #f44336;
     color: white;
@@ -86,3 +98,4 @@ body {
     border: none;
     border-radius: 10px;
 }
+/*fin del formulario y su diseño*/
