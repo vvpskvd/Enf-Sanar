@@ -1,0 +1,88 @@
+/*fondo*/
+body {
+    background: linear-gradient(to bottom, #24c966, #2d8344);
+    background-size: 100% 100vh;
+    height: 100vh;
+    margin: 0;
+}
+
+/*fondo y formulario*/
+.formulario {
+    background: linear-gradient(to center, #24c966, #2d8344);
+    padding-top: 290px;
+}
+
+/*titulo*/
+.titulo_log {
+    background-color: black;
+    width: 400px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+/*formulario y su diseño*/
+.formulario_log {
+    background-color: black;
+    color:white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/*diseño general*/
+.textos_log {
+    display: inline-block;
+    color: white;
+    width: 100px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*diseño general*/
+.inputs_log {
+    border-bottom: 1px solid white;
+    border-top: 0.1px solid black;
+    border-left: 0.1px solid black;;
+    border-right: 0.1px solid black;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+    background-color: transparent; 
+    color: #f5f6f7; 
+}
+
+/*diseño general*/
+.btn_log {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 6px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+/*diseño general*/
+.btn_cancelar {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 6px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
