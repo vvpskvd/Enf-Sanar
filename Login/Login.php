@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Inyeccion archivo CSS-->
-    <link rel="stylesheet" href="Login.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - EnfSanar</title>
+    
+    <title>Inicio de Sesion</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
-
-    <!--Formulario General-->
-    <div id="container">
-        <form action="action_page.php" method="post">
-
-        <div>
-        <!--Usuario-->
-        <label for="usuario"><b>Username</b></label> <br>
-        <input type="text" placeholder="Ingrese Usuario" name="usuario" required>
-
-        <br>
-        <br>
-
-        <!--Contraseña-->
-        <label for="contra"><b>Password</b></label> <br>
-        <input type="password" placeholder="Ingrese Contraseña" name="contra" required>
-
-        <br>
-        <br>
-
-            <button type="submit" class="login-button">Iniciar Sesion </button>
-
+    
+    <center>
+        
+        <div class="formulario">
             
-
-            <label>  <input type="checkbox" checked="checked" name="remember"> Remember me  </label> 
-
-            </div>
-
-            <!--Container para CANCELAR Y OLVIDASTE CONTRASEÑA-->
-
-            <div class="btnCancelar-btnOlvidasteContra">
-
-                <button type="button" class="cancelbtn">Cancel</button>
-                <span class="psw"> <a href="#">Olvidaste la contraseña?</a></span>
-
-            </div>
-
-        </form>
-
-    </div>
-
+            <center class="titulo_log">
+                Bienvenido a EnfSanar
+                <h4>
+                     <?php
+                        session_start();
+                        if (isset($_SESSION['loginMessage']))
+                        {
+                            echo $_SESSION['loginMessage'];
+                            unset($_SESSION['loginMessage']);
+                        }
+                     ?>
+                </h4>
+            </center>
+            
+            <br/>
+            
+            <form action="log_check.php" method="POST" class="formulario_log">
+                
+                <div>
+                    <label class="textos_log">Usuario</label> <br/>
+                    <input type="text" class="inputs_log" name="usuario" placeholder="Ingrese Usuario">
+                </div>
+                
+                <div>
+                    <br/>
+                    <label class="textos_log">Contraseña</label> <br/>
+                    <input type="password" class="inputs_log" name="contra" placeholder="Ingrese Contraseña">
+                </div>
+                
+                <div>
+                    <br/> <input style="cursor:pointer" type="checkbox" name="remember" value="1"> Guardar Sesion
+                    <br/> 
+                    <br/>
+                    <input class="btn_log" type="submit" name="ingreso" value="Ingresar">
+                    <input class="btn_cancelar" type="submit" name="cancelar" value="Cancelar">
+                </div>
+                
+            </form>
+            
+            
+        </div>
+        
+    </center>
+    
 </body>
 
 </html>
