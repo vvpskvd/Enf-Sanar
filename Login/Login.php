@@ -18,17 +18,20 @@
         <div class="formulario">
             
             <center class="titulo_log">
-                Bienvenido a EnfSanar
-                <h4>
-                     <?php
-                        session_start();
-                        if (isset($_SESSION['loginMessage']))
-                        {
-                            echo $_SESSION['loginMessage'];
-                            unset($_SESSION['loginMessage']);
-                        }
-                     ?>
-                </h4>
+                <figure>
+                    <img src="ImageLogo.png" alt="Imagen" class="imageLogo">
+                </figure>
+                    Bienvenido a EnfSanar
+                    <h4 class="titulo_titulo_log">
+                        <?php
+                            session_start();
+                            if (isset($_SESSION['loginMessage']))
+                            {
+                                echo $_SESSION['loginMessage'];
+                                unset($_SESSION['loginMessage']);
+                            }
+                        ?>
+                    </h4>
             </center>
             
             <br/>
