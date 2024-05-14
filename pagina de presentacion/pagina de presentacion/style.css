@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baselines;
+}
+
+
+body {
+    text-align:center;
+    font-family: sans-serif;
+
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #97ff98;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+
+}
+
+.login {
+    margin-left: 30px;
+}
+
+
+.Login a {
+    text-decoration: none;
+    color: #43957a;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a {
+    display: block;
+    padding: 23px 20px;
+    color:#43957a;
+    text-transform: uppercase;
+    font-size: 20px; 
+}
+
+.navbar a:hover {
+    background: #07E109;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}    
+
+.header {
+    height: 50vh !important;
+    
+}
+
+.title {
+    margin-bottom:40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 18px; 
+}
+
+.content {
+    height: 50vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services {
+    padding: 20px;
+
+}
+
+.about {
+    padding: 200px;
+    height: 50vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align:center;
+
+}
+
+.box-container .box{
+    height: 20rem;
+    width: 17rem;
+    background: #70AB6F; 
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rgb(red, green, blue);
+    margin: 2rem;
+}
+
+.box-container .box i {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius:50%;
+    color: #fff;
+    margin: 1rem 0;
+
+}
+
+.box-container .box h3 {
+    font-size: 20px;
+}
+
+.box-container .box p {
+    padding:   15px;
+    font-size: 16px;
+
+}
+
+.contact {
+    padding: 100px;
+    text-align: center;
+
+
+}
+.logo {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: -5px;
+    background:linear-gradient(to right, #97FF98, #D9D9D9);
+    padding: 40px;
+    font-size: 20px;
+    border-bottom-right-radius: 20px;
+     }
