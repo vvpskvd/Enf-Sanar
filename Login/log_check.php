@@ -7,7 +7,7 @@ $user= "root";
 
 $pass= "";
 
-$db= "log_enfsanar";
+$db= "enfsanar";
 
 $connect= mysqli_connect($host, $user, $pass, $db);
 
@@ -23,7 +23,7 @@ if($connect == false)
         $usuario = $_POST["usuario"];
         $contra = $_POST["contra"];
         
-        $sql= "select * from usuarios_login where usuario = '".$usuario."' AND contra = '".$contra."' ";
+        $sql= "select * from login where usuario = '".$usuario."' AND contra = '".$contra."' ";
         
         $result = mysqli_query($connect, $sql);
         
@@ -35,17 +35,17 @@ if($connect == false)
             $_SESSION['usuario'] = $usuario;
             $_SESSION['rol'] = "recepcionista";
             
-            header("location:home_recepcion.php");
+            header("location:home_recep.php");
             exit;
         }
         
         //Pagina Auxiliar
-        if($row["rol"] == "auxiliar") 
+        if($row["rol"] == "enfermera") 
         {
             $_SESSION['usuario'] = $usuario;
-            $_SESSION['rol'] = "auxiliar";
+            $_SESSION['rol'] = "enfermera";
             
-            header("location:home_auxiliar.php");
+            header("location:home_enf.php");
             exit;
         }
         
