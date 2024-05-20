@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-05-2024 a las 21:58:02
+-- Tiempo de generación: 21-05-2024 a las 01:07:58
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -276,7 +276,7 @@ DELIMITER ;
 CREATE TABLE `login` (
   `id_login` varchar(100) NOT NULL,
   `usuario` varchar(100) DEFAULT NULL,
-  `contraseña` varchar(100) DEFAULT NULL,
+  `contra` varchar(100) DEFAULT NULL,
   `id_personal` varchar(100) DEFAULT NULL,
   `rol` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -285,7 +285,7 @@ CREATE TABLE `login` (
 -- Volcado de datos para la tabla `login`
 --
 
-INSERT INTO `login` (`id_login`, `usuario`, `contraseña`, `id_personal`, `rol`) VALUES
+INSERT INTO `login` (`id_login`, `usuario`, `contra`, `id_personal`, `rol`) VALUES
 ('L1', 'ana_ramirez@gmail.com', 'anaramirezle1', 'PE1', 'enfermera'),
 ('L2', 'gabby_gomez@hotmail.com', 'gabbygomezle2', 'PE2', 'enfermera'),
 ('L3', 'juanito_marco@gmail.com', 'juanitomarcole3', 'PE3', 'enfermera'),
