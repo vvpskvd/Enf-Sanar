@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - EnfSanar</title>
+    <!--CSS-->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,34 +13,29 @@
         <a class="logo">
             <img src="LogoImageWEB.png" alt="Image" style="width:80px; height:80px;">
         </a>
-
-        <a class="title-efnsanar">
-            EnfSanar
-        </a>
+        
+        <a class="title-efnsanar">EnfSanar</a>
         
         <nav class="navbar"> 
-            <a href="#">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Contacto</a>
-            <a href="#">Servicios</a>
-            <a href="\Login\login.php">Login</a> 
+            <a href="#header">Inicio</a>
+            <a href="#services">Servicios</a>
+            <a href="#about">Nosotros</a>
+            <a href="#contact">Contacto</a>
+            <a href="Login/login.php">Login</a> 
         </nav>
         
     </div>
 
-    <header class=" content header">
-        <h2 class="title">Enfsanar S.A.S</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis numquam, quisquam
-            quibusdam placeat sed inventore voluptatum reiciendis optio accusamus amet vitae 
-            similique perferendis! Esse dignissimos, sed accusantium tempore minus nesciunt.
-
-        </p>
-
-
+    <header class="content-header" id="header">
+        <h2 class="title-enfsanar">Enfsanar S.A.S</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis numquam, quisquam
+                quibusdam placeat sed inventore voluptatum reiciendis optio accusamus amet vitae 
+                similique perferendis! Esse dignissimos, sed accusantium tempore minus nesciunt.
+            </p>
     </header>
 
-    <div class="content services">
+    <div class="content-services" id="services">
         <h2 class="title">Servicios</h2>
         <p> 
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus mollitia quidem obcaecati repellendus doloremque vitae ratione at nisi, dolor in veniam inventore recusandae earum corrupti fuga voluptatem ab aliquid sed.
@@ -47,47 +43,36 @@
     </div>
 
 
-    <section class="content about">
-
-        <h2 class="title">Nosotros</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus necessitatibus beatae perferendis quidem, hic dolorem laudantium quae aperiam modi quos, tenetur ipsum nostrum maiores asperiores? Minima reprehenderit ratione repellat esse.
-        </p>
-
-        <div class="box-container">
-            <div class="box"> 
-                <h3>Mision</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab rerum neque fugit. Nostrum, minima fugit ducimus eligendi quas, consequuntur ratione ipsum obcaecati ea dolore labore, quae impedit cum non cumque!
-                </p>
-
-            </div>
-
-            <br>  
-
-            <div class="box">
-                <h3>Vision</h3>
-
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci explicabo, non, maxime corrupti soluta nihil quam amet error dignissimos id accusamus minus similique ad veniam accusantium iure mollitia quos autem.
-                </p>
-
-            </div>
-
-
-
-        </div>
-
+    <section class="content-about" id="about">
+        <h2 class="title">
+        Nosotros
+        </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus necessitatibus beatae perferendis quidem, hic dolorem laudantium quae aperiam modi quos, tenetur ipsum nostrum maiores asperiores? Minima reprehenderit ratione repellat esse.
+            </p>
+                <div class="box-container">
+                    <div class="box"> 
+                        <h3>Mision</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab rerum neque fugit. Nostrum, minima fugit ducimus eligendi quas, consequuntur ratione ipsum obcaecati ea dolore labore, quae impedit cum non cumque!
+                            </p>
+                    </div>
+                    
+                    <br>  
+                    
+                        <div class="box">
+                            <h3>Vision</h3>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci explicabo, non, maxime corrupti soluta nihil quam amet error dignissimos id accusamus minus similique ad veniam accusantium iure mollitia quos autem.
+                                </p>
+                        </div>
+                </div>
     </section>
 
-    <section class="content contact">
-
+    <section class="content-contact" id="contact">
         <h2 class="title">Contacto</h2>
         <p>3422</p>
         <p>42423232323232</p>
-
-        
-
     </section>
     
 </body>

@@ -1,3 +1,4 @@
+/*Cuerpo de la pagina*/
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +6,6 @@
     font-size: 100%;
     vertical-align: baselines;
 }
-
 
 body {
     text-align:center;
@@ -60,47 +60,63 @@ body {
     
 }
 
-.title {
-    margin-bottom:40px;
-    font-size: 60px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
 p {
     margin-bottom: 40px;
     font-size: 18px; 
 }
+/*Fin del cuerpo de la pagina*/
 
-.content {
-    height: 50vh;
+/*Contenido EnfSanar - Servicios - Nosotros - Contacto*/
+.content-header {
+    height: 100vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: blue;
 }
 
-.services {
-    padding: 20px;
-
+.title-enfsanar {
+    margin-bottom:40px;
+    font-size: 80px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-.about {
-    padding: 200px;
-    height: 50vh;
+.content-services {
+    height: 100vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    background-color: red;
 }
 
+.content-about {
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.content-contact {
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+}
+/*Fin contenido EnfSanar - Servicios - Nosotros - Contacto*/
+
+/*Contenido de Nostros en boxes (vision y mision)*/
 .box-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     text-align:center;
-
 }
 
 .box-container .box{
@@ -121,7 +137,6 @@ p {
     border-radius:50%;
     color: #fff;
     margin: 1rem 0;
-
 }
 
 .box-container .box h3 {
@@ -131,15 +146,10 @@ p {
 .box-container .box p {
     padding:   15px;
     font-size: 16px;
-
 }
+/*Fin de Contenido de Nostros en boxes (vision y mision)*/
 
-.contact {
-    padding: 100px;
-    text-align: center;
-
-
-}
+/*Logo y diseño superior menu*/
 .logo {
     position: absolute;
     top: 0;
@@ -164,3 +174,4 @@ p {
     text-transform: uppercase;
     font-size: 20px; 
 }
+/*Fin de logo y diseño superior menu*/
