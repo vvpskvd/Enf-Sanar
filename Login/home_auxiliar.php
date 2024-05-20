@@ -7,7 +7,7 @@ if (!isset($_SESSION["usuario"])) {
     exit;
     
 }
-elseif(!$_SESSION["rol"] == "medico" && $_SESSION["rol"] == "recepcionista") {
+elseif($_SESSION["rol"] == "recepcionista") {
     
     header("location:login.php");
     exit;

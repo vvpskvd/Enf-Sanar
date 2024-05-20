@@ -29,16 +29,6 @@ if($connect == false)
         
         $row = mysqli_fetch_array($result);
         
-        //Pagina Medico
-        if($row["rol"] == "medico") 
-        {
-            $_SESSION['usuario'] = $usuario;
-            $_SESSION['rol'] = "medico";
-            
-            header("location:home_medico.php");
-            exit;
-        }
-        
         //Pagina Recepcionista
         if($row["rol"] == "recepcionista") 
         {
