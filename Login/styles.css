@@ -4,20 +4,16 @@ body {
     background-size: 100% 100vh;
     height: 100vh;
     margin: 0;
+    
 }
-
-/*fondo y formulario*/
+/* diseño del menu formulario */
 .formulario {
-    background: linear-gradient(to center, #24c966, #2d8344);
-    padding-top: 190px;
-}
-
-/*logo*/
-.imageLogo {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    content: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh; 
+    padding-top: center;
+    
 }
 
 /*titulo*/
@@ -31,11 +27,20 @@ body {
     text-align: center;
     font-weight: bold;
     border-radius: 15px;
+    box-shadow: 15px 15px 15px 15px rgba(0,0,0,0.2);
 }
 
 /*titulo 2*/
 .titulo_titulo_log {
     background-color:red;
+}
+
+/*logo*/
+.imageLogo {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    content: center;
 }
 
 /*formulario y su diseño*/
@@ -44,7 +49,10 @@ body {
     width: 400px;
     padding: 30px;
     border-radius: 15px;
+    margin: 50px;
+    box-shadow: 15px 15px 15px 15px rgba(0,0,0,0.2); 
 }
+
 
 /*diseño general*/
 .textos_log {
@@ -68,6 +76,7 @@ body {
     background-color: transparent; 
     color: black; 
 }
+
 
 /*diseño btn Ingresar*/
 .btn_log {
@@ -99,3 +108,5 @@ body {
     border-radius: 10px;
 }
 /*fin del formulario y su diseño*/
+
+

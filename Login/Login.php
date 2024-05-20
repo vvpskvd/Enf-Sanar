@@ -45,12 +45,13 @@
                 
                 <div>
                     <br/>
+                    <br/>
                     <label class="textos_log">Contraseña</label> <br/>
                     <input type="password" class="inputs_log" name="contra" placeholder="Ingrese Contraseña">
                 </div>
                 
                 <div>
-                    <br/> <input style="cursor:pointer" type="checkbox" name="remember" value="1"> Guardar Sesion
+                    <br/>
                     <br/> 
                     <br/>
                     <input class="btn_log" type="submit" name="ingreso" value="Ingresar">

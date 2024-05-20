@@ -1,16 +1,15 @@
-/*Cuerpo de la pagina*/
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
-    vertical-align: baselines;
+    vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 body {
-    text-align:center;
+    text-align: center;
     font-family: sans-serif;
-
 }
 
 .head {
@@ -26,8 +25,25 @@ body {
 
 .navbar {
     display: flex;
-    margin-right: 10px;
-    margin-left: 1015px;
+    justify-content: flex-end;
+    align-items: center; 
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.navbar a {
+    display: block;
+    padding: 15px 20px; 
+    color: black; 
+    text-transform: uppercase;
+    font-size: 18px; 
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    position: relative; 
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: #07E109;
 }
 
 .Login a {
@@ -37,141 +53,123 @@ body {
     font-size: 20px;
 }
 
-.navbar a {
-    display: block;
-    padding: 23px 20px;
-    color:#43957a;
-    text-transform: uppercase;
-    font-size: 20px; 
-}
-
-.navbar a:hover {
-    background: #07E109;
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}    
-
-.header {
-    height: 50vh !important;
-    
-}
-
-p {
-    margin-bottom: 40px;
-    font-size: 18px; 
-}
-/*Fin del cuerpo de la pagina*/
-
-/*Contenido EnfSanar - Servicios - Nosotros - Contacto*/
-.content-header {
+.content-header, .content-services, .content-about, .content-contact {
     height: 100vh;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    padding: 50px; 
+
 }
 
-.title-enfsanar {
-    margin-bottom:40px;
+.content-general {
+        background: linear-gradient(to bottom, #24c966, #2d8344);
+}
+
+
+.title-efnsanar {
+    display: block;
+    padding: 15px 20px; 
+    color: black;
+    text-transform: uppercase;
+    font-size: 25px; 
+    font-weight: bold;
+}
+
+.title-header{
+    margin-bottom: 40px;
     font-size: 80px;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-.content-services {
-    height: 100vh;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
 }
 
-.content-about {
-    height: 100vh;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-}
-
-.content-contact {
-    height: 100vh;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
-}
-/*Fin contenido EnfSanar - Servicios - Nosotros - Contacto*/
-
-/*Contenido de Nostros en boxes (vision y mision)*/
 .box-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    text-align:center;
+    text-align: center;
+    gap: 20px; 
 }
 
-.box-container .box{
-    height: 20rem;
-    width: 17rem;
-    background: #70AB6F; 
-    text-align: center;
+.box {
+    max-width: 17rem; 
+    background: #70AB6F;
     border-radius: 1rem;
-    box-shadow: 0 .3rem 5rem rgb(red, green, blue);
-    margin: 2rem;
+    box-shadow: 0 .3rem 1rem rgba(0, 0, 0, 0.2);
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
 }
 
-.box-container .box i {
-    height: 3rem;
-    width: 3rem;
-    line-height: 3rem;
-    text-align: center;
-    border-radius:50%;
-    color: #fff;
-    margin: 1rem 0;
+.box h3 {
+    font-size: 30px;
+    margin-bottom: 10px; 
+    color: black; 
 }
 
-.box-container .box h3 {
-    font-size: 20px;
+.box p {
+    font-size: 15px;
+    color: black; 
+    line-height: 1.5; 
+    margin: 0; 
 }
 
-.box-container .box p {
-    padding:   15px;
-    font-size: 16px;
-}
-/*Fin de Contenido de Nostros en boxes (vision y mision)*/
 
-/*Logo y diseño superior menu*/
+
 .logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px; 
-    height: 70px; 
-    background:linear-gradient(to right, #97FF98, #D9D9D9);
+    width: 100px;
+    height: 70px;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .logo img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    object-position: center; 
 }
 
-.title-efnsanar {
-    margin-left: 120px;
-    display: block;
-    color:#43957a;
-    text-transform: uppercase;
-    font-size: 20px; 
+
+
+/* Resoulucion para pantalla 768*/
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .title-enfsanar {
+        font-size: 40px;
+    }
+
+    .box-container {
+        flex-direction: column;
+    }
+
+    .box-container .box {
+        width: 90%;
+        margin: 1rem 0;
+    }
 }
-/*Fin de logo y diseño superior menu*/
+
