@@ -59,8 +59,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px; 
+    padding: 250px; 
+}
 
+.content-general p {
+    font-size: 20px;
+    line-height: 1.5;
 }
 
 .content-general {
@@ -78,14 +82,14 @@ body {
 }
 
 .title-header{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 80px;
     font-weight: 600;
     text-transform: uppercase;
 }
 
 p {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 18px;
 }
 
@@ -94,15 +98,16 @@ p {
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    gap: 20px; 
+    padding-top: 10px;
+    gap: 25px; 
 }
 
 .box {
-    max-width: 17rem; 
+    max-width: 30rem; 
     background: #70AB6F;
     border-radius: 1rem;
     box-shadow: 0 .3rem 1rem rgba(0, 0, 0, 0.2);
-    padding: 20px; 
+    padding: 15px; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
@@ -119,6 +124,8 @@ p {
     color: black; 
     line-height: 1.5; 
     margin: 0; 
+    max-width: 25rem; /* Establece el ancho máximo que desees */
+    margin: 0 auto;
 }
 
 
