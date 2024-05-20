@@ -124,7 +124,7 @@ p {
     color: black; 
     line-height: 1.5; 
     margin: 0; 
-    max-width: 25rem; /* Establece el ancho máximo que desees */
+    max-width: 25rem;
     margin: 0 auto;
 }
 
