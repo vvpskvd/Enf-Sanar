@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--CSS / Bootstrap y Logo Pestaña-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Inicio de Sesion</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href="LogoImageWebl.ico" type="image/x-icon">
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -18,6 +17,7 @@
         
         <div class="formulario">
             
+            <!--Logo y mensaje de usuario / contraseña incorrectos-->
             <center class="titulo_log">
                 <figure>
                     <img src="ImageLogo.png" alt="Imagen" class="imageLogo">
@@ -37,6 +37,7 @@
             
             <br/>
             
+            <!--Formulario y datos de login-->
             <form action="log_check.php" method="POST" class="formulario_log">
                 
                 <div>
