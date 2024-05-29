@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/vvpskvd/Enf-Sanar/tree/main/Images">
-        <img src="https://github.com/vvpskvd/Enf-Sanar/blob/main/Images/ImageLogo.png" alt="Image" margin=0 auto; align-content: center/>
+        <img src="https://github.com/vvpskvd/EnfSanar/blob/main/Img/LogoImage.png" alt="Image" margin=0 auto; align-content: center/>
     </a>
 </p>
 
