@@ -1,0 +1,185 @@
+* {
+    font-family: "Reddit Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, #24c966, #2d8344);
+}
+
+ul {
+    list-style: none;
+}
+
+/*estructura de la pagina*/
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.logo {
+    max-width: 450px;
+    max-height: 350px;
+    width: 60px;
+    height: 60px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.menu-bar {
+    background: linear-gradient(to right, #24c966, #2d8344);
+    padding: 15px;
+}
+
+.left-column {
+    background: linear-gradient(to right, #24c966, #D9D9D9);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.left-column ul {
+    display: flex;
+    justify-items: end;
+    align-items: center;
+}
+
+.menu-principal {
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 10px;
+    background-color: rgb(0, 130, 78);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-principal:hover {
+    background-color: rgb(0, 160, 90);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.right-column {
+    background: linear-gradient(to right, #d9d9d9, #24c966);
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas iguales */
+    grid-gap: 10px; /* Espacio entre las columnas */
+}
+
+form {
+    padding: 10px;
+    border: 1px solid #71937f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.714);
+    display: contents; /* Permite que los divs dentro del formulario se comporten como grid items */
+}
+
+.div-form {
+    padding: 10px;
+    border: 1px solid #71937f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.714);
+}
+
+
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0eeee;
+}
+
+legend {
+    font-weight: bold;
+    width: 60%;
+    background-color: rgb(0, 130, 78);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 2px;
+}
+
+input,
+textarea,
+select {
+    width: 80%;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+textarea {
+    height: 100px;
+}
+
+
+label+input,
+label+textarea {
+    margin-top: 5px;
+}
+
+.buttom-end {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #24c966, #D9D9D9);
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    width: 40%;
+}
+
+.buttom-end ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.buttom-end ul li {
+    display: inline-block;
+    margin: 15px 15px;
+}
+
+.buttom-end input[type="submit"],
+.buttom-end ul li a {
+    background-color: rgb(0, 130, 78);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.buttom-end input[type="submit"]:hover,
+.buttom-end ul li a:hover {
+    background-color: rgb(0, 160, 90);
+}

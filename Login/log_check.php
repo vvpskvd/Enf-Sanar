@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usuario'] = $usuario;
             $_SESSION['rol'] = "recepcionista";
             
-            header("Location: ../Recepcionista/home_recep.php");
+            header("Location: ../Recepcionista/index.php");
             exit;
         }
         // Página Enfermera.
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usuario'] = $usuario;
             $_SESSION['rol'] = "enfermera";
             
-            header("Location: ../Enfermera/home_enf.php");
+            header("Location: ../Enfermera/index.php");
             exit;
         }
     } else {

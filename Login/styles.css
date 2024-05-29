@@ -1,4 +1,8 @@
-/*fondo*/
+* {
+    font-family: "Reddit Sans", sans-serif;
+
+}
+
 body {
     background: linear-gradient(to bottom, #24c966, #2d8344);
     background-size: 100% 100vh;
@@ -77,35 +81,22 @@ body {
     color: black; 
 }
 
-
-/*diseño btn Ingresar*/
-.btn_log {
-    background-color: #4CAF50;
+.btn_log, .btn_cancelar, .menu-principal {
+    background-color: rgb(0, 130, 78);
     color: white;
-    padding: 8px 14px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    margin: 6px 15px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
+    padding: 10px 10px;
+    margin: 10px;
     border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
-/*diseño btn Cancelar*/
-.btn_cancelar {
-    background-color: #f44336;
-    color: white;
-    padding: 8px 14px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    margin: 6px 15px;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
+.btn_log:hover, .btn_cancelar:hover, .menu-principal:hover{
+    background-color: rgb(0, 160, 90);
 }
 
 
