@@ -19,11 +19,6 @@ ul {
     width: 80%;
 }
 
-.container-form {
-    margin: 0 auto;
-    width: 40%;
-}
-
 .logo {
     max-width: 450px;
     max-height: 350px;
@@ -75,12 +70,13 @@ ul {
     background-color: rgb(0, 160, 90);
 }
 
+
 .right-column {
     background: linear-gradient(to right, #d9d9d9, #24c966);
     padding: 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Tres columnas iguales */
-    grid-gap: 10px; /* Espacio entre las columnas */
+    grid-template-columns: 1fr 2fr; /* Tres columnas iguales */
+    grid-gap: 50px; /* Espacio entre las columnas */
 }
 
 form {
@@ -98,11 +94,9 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.714);
 }
 
-
 h2 {
     margin-top: 0;
 }
-
 
 fieldset {
     margin-bottom: 20px;
@@ -179,7 +173,7 @@ label+textarea {
     cursor: pointer;
     border: none;
     padding: 10px 10px;
-    margin: 10px;
+    margin: 12px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
 }
@@ -187,4 +181,25 @@ label+textarea {
 .buttom-end input[type="submit"]:hover,
 .buttom-end ul li a:hover {
     background-color: rgb(0, 160, 90);
+}
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgb(0, 130, 78);
+    color: white;
+}
+
+tr:hover {
+    background-color: #33da57;
 }

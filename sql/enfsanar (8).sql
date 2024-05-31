@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2024 a las 04:16:34
+-- Tiempo de generación: 31-05-2024 a las 04:13:32
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -45,7 +45,7 @@ INSERT INTO `cita_consulta` (`id_cita`, `id_paciente`, `fecha_solicitud`, `fecha
 ('CC3', 1093456789, '2023-12-15', '2024-01-03', '15:30:00'),
 ('CC4', 1094567890, '2024-04-23', '2024-05-10', '09:30:00'),
 ('CC5', 1095678901, '2024-04-05', '2024-05-05', '18:00:00'),
-('CC6', 1093591378, '2024-05-16', '2024-05-15', '15:05:00');
+('CC6', 1093591378, '2024-05-30', '2024-05-31', '15:19:00');
 
 --
 -- Disparadores `cita_consulta`
@@ -78,7 +78,7 @@ DELIMITER ;
 --
 
 CREATE TABLE `cita_procedimiento` (
-  `id_cita_procedimiento` varchar(100) NOT NULL,
+  `id_cita` varchar(100) NOT NULL,
   `id_paciente` int(11) DEFAULT NULL,
   `fecha_solicitud` date DEFAULT NULL,
   `fecha_programada` date DEFAULT NULL,
@@ -89,13 +89,13 @@ CREATE TABLE `cita_procedimiento` (
 -- Volcado de datos para la tabla `cita_procedimiento`
 --
 
-INSERT INTO `cita_procedimiento` (`id_cita_procedimiento`, `id_paciente`, `fecha_solicitud`, `fecha_programada`, `hora_programada`) VALUES
+INSERT INTO `cita_procedimiento` (`id_cita`, `id_paciente`, `fecha_solicitud`, `fecha_programada`, `hora_programada`) VALUES
 ('CP1', 1091234567, '2024-05-01', '2024-05-10', '14:40:00'),
 ('CP2', 1092345678, '2024-02-25', '2024-03-05', '15:50:00'),
 ('CP3', 1093456789, '2024-01-03', '2024-01-07', '08:20:00'),
 ('CP4', 1094567890, '2024-05-05', '2024-05-15', '09:50:00'),
 ('CP5', 1095678901, '2024-05-10', '2024-05-12', '10:50:00'),
-('CP6', 1093591378, '2024-05-28', '2024-05-29', '15:09:00');
+('CP6', 1093591378, '2024-06-01', '2024-06-03', '17:19:00');
 
 --
 -- Disparadores `cita_procedimiento`
@@ -106,7 +106,7 @@ CREATE TRIGGER `before_insert_cita_procedimiento` BEFORE INSERT ON `cita_procedi
     DECLARE prefix VARCHAR(2);
     DECLARE new_id INT;
 
-    SELECT id_cita_procedimiento INTO last_id FROM cita_procedimiento ORDER BY id_cita_procedimiento DESC LIMIT 1;
+    SELECT id_cita INTO last_id FROM cita_procedimiento ORDER BY id_cita DESC LIMIT 1;
 
     IF last_id IS NULL THEN
         SET new_id = 1;
@@ -116,7 +116,7 @@ CREATE TRIGGER `before_insert_cita_procedimiento` BEFORE INSERT ON `cita_procedi
 
     SET prefix = 'CP';
 
-    SET NEW.id_cita_procedimiento = CONCAT(prefix, new_id);
+    SET NEW.id_cita = CONCAT(prefix, new_id);
 END
 $$
 DELIMITER ;
@@ -147,18 +147,6 @@ CREATE TABLE `consulta` (
   `hora_inicio` time DEFAULT NULL,
   `hora_final` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `consulta`
---
-
-INSERT INTO `consulta` (`id_consulta`, `id_enfermera`, `id_paciente`, `id_cita`, `diagnostico_principal`, `motivo_consulta`, `largo`, `ancho`, `profundidad`, `forma`, `olor`, `bordes_herida`, `infeccion`, `exudado_tipo`, `exudado_nivel`, `fecha_atencion`, `hora_inicio`, `hora_final`) VALUES
-('C1', 1076580427, 1091234567, 'CC1', 'W010', 'Caída en el mismo nivel por deslizamiento, tropezón y traspié', 2, 3, 'Superficial', 'Ovalada', 'Sí', 'Regulares', 'Local', 'Seroso', 'Bajo', '2024-05-01', '16:42:00', '17:05:00'),
-('C2', 1086343168, 1092345678, 'CC2', 'S610', 'Herida de dedo(s) de la mano, sin daño de la(s) uña(s)', 4, 4, 'Parcial', 'Irregular', 'No', 'Irregulares', 'Diseminada', 'Purulento', 'Medio', '2024-03-02', '17:03:00', '17:15:00'),
-('C3', 1060234767, 1093456789, 'CC3', 'T232', 'Quemadura de la muñeca y de la mano, de segundo grado', 5, 2, 'Superficial', 'Redonda', 'No', 'Elevados', 'Local', 'Seroso', 'Alto', '2024-01-03', '15:45:00', '15:59:00'),
-('C4', 1060234767, 1094567890, 'CC4', 'W540', 'Mordedura o ataque de perro', 2, 4, 'Penetrante', 'Irregular', 'No', 'Elevados', 'Diseminada', 'Serosanguinolento', 'Medio', '2024-05-10', '09:25:00', '09:40:00'),
-('C5', 1086343168, 1095678901, 'CC5', 'N61X', 'Transtorno inflamatorio de la mama (absceso)', 3, 6, 'Superficial', 'Ovalada', 'Sí', 'Elevados', 'Local', 'Purulento', 'Alto', '2024-05-05', '18:05:00', '18:30:00'),
-('C6', 1076580427, 1093591378, 'CC6', 'AAAA', 'AAAA', 2, 2, 'Superficial', 'Circular', 'Si', 'Bien definidos', 'Ninguna', 'Ninguno', 'Ninguno', '2024-05-28', '20:57:00', '21:57:00');
 
 --
 -- Disparadores `consulta`
@@ -244,29 +232,26 @@ CREATE TABLE `paciente` (
   `telefono` varchar(20) NOT NULL,
   `direccion` varchar(100) NOT NULL,
   `barrio` varchar(50) NOT NULL,
-  `municipio` varchar(50) NOT NULL,
   `fecha_nacimiento` date NOT NULL,
-  `nacionalidad` varchar(50) NOT NULL,
   `sexo` varchar(10) NOT NULL,
   `tipo_sangre` varchar(5) NOT NULL,
   `correo` varchar(100) NOT NULL,
   `ocupacion` varchar(50) NOT NULL,
   `entidad` varchar(50) NOT NULL,
-  `estado_civil` varchar(20) NOT NULL,
-  `comorbilidades` text DEFAULT NULL
+  `estado_civil` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `paciente`
 --
 
-INSERT INTO `paciente` (`identificacion`, `tipo_documento`, `nombre`, `apellido`, `telefono`, `direccion`, `barrio`, `municipio`, `fecha_nacimiento`, `nacionalidad`, `sexo`, `tipo_sangre`, `correo`, `ocupacion`, `entidad`, `estado_civil`, `comorbilidades`) VALUES
-(1091234567, 'Cédula de extranjería', 'Juan', 'García', '310 123 4567', 'Carrera 5 # 10-15', 'Villa Nueva', 'Cúcuta', '1965-09-23', 'Colombiana', 'Masculino', 'A+', 'juanpablo.gr@gmail.com', 'Profesor', 'COOMEVA', 'Casado', 'Hipertension arterial'),
-(1092345678, 'Tarjeta de identidad', 'María', 'Martínez', '314 345 6789', 'Calle 8 # 20-25', 'San Rafael', 'Villa del Rosario', '2008-07-15', 'Colombiana', 'Femenino', 'O-', 'mariafernanda.ml@hotmail.com', 'Matematico', 'EMS', 'Union Libre', 'Ninguna'),
-(1093456789, 'Cédula de ciudadanía', 'Carlos', 'Rodríguez', '317 567 8901', 'Avenida 3 # 15-30', 'Villa del Carmen', 'Los Patios', '1968-11-04', 'Colombiana', 'Masculino', 'B+', 'carlosandresrh@outlook.com', 'Ingeniero Mecanico', 'SISBEN - III', 'Casado', 'Ninguna'),
-(1093591378, 'Cedula', 'Carlos', 'Mantilla', '321 581 5089', 'Avenida 7', 'Cabrera', 'Cucuta', '2024-05-01', 'Colombiana', 'Masculino', 'A+', 'rodolfo20121999@hotmail.com', 'estudiante', 'na', 'na', 'na'),
-(1094567890, 'Tarjeta de identidad', 'Ana', 'López', '321 789 0123', 'Calle 12 # 25-20', 'El Contento', 'Los Patios', '2008-05-29', 'Colombiana', 'Femenino', 'AB-', 'anasofia.lp@gmail.com', 'Ingeniero Quimico', 'SISBEN - II', 'Casado', 'Ninguna'),
-(1095678901, 'Cédula de ciudadanía', 'Luis', 'Hernández', '318 901 2345', 'Avenida 7 # 10-35', 'El Salado', 'Cúcuta', '1967-03-12', 'Colombiana', 'Masculino', 'A-', 'luismiguel.hg@hotmail.com', 'Juez', 'COOMEVA', 'Soltero', 'Obesidad');
+INSERT INTO `paciente` (`identificacion`, `tipo_documento`, `nombre`, `apellido`, `telefono`, `direccion`, `barrio`, `fecha_nacimiento`, `sexo`, `tipo_sangre`, `correo`, `ocupacion`, `entidad`, `estado_civil`) VALUES
+(1091234567, 'Cédula de extranjería', 'Juan', 'García', '310 123 4567', 'Carrera 5 # 10-15', 'Villa Nueva', '1965-09-23', 'Masculino', 'A+', 'juanpablo.gr@gmail.com', 'Profesor', 'COOMEVA', 'Casado'),
+(1092345678, 'Tarjeta de identidad', 'María', 'Martínez', '314 345 6789', 'Calle 8 # 20-25', 'San Rafael', '2008-07-15', 'Femenino', 'O-', 'mariafernanda.ml@hotmail.com', 'Matematico', 'EMS', 'Union Libre'),
+(1093456789, 'Cédula de ciudadanía', 'Carlos', 'Rodríguez', '317 567 8901', 'Avenida 3 # 15-30', 'Villa del Carmen', '1968-11-04', 'Masculino', 'B+', 'carlosandresrh@outlook.com', 'Ingeniero Mecanico', 'SISBEN - III', 'Casado'),
+(1093591378, 'Cedula', 'Carlos', 'Mantilla', '321 581 5089', 'Avenida 7', 'Cabrera', '2024-05-01', 'Masculino', 'A+', 'rodolfo20121999@hotmail.com', 'estudiante', 'na', 'na'),
+(1094567890, 'Tarjeta de identidad', 'Ana', 'López', '321 789 0123', 'Calle 12 # 25-20', 'El Contento', '2008-05-29', 'Femenino', 'AB-', 'anasofia.lp@gmail.com', 'Ingeniero Quimico', 'SISBEN - II', 'Casado'),
+(1095678901, 'Cédula de ciudadanía', 'Luis', 'Hernández', '318 901 2345', 'Avenida 7 # 10-35', 'El Salado', '1967-03-12', 'Masculino', 'A-', 'luismiguel.hg@hotmail.com', 'Juez', 'COOMEVA', 'Soltero');
 
 -- --------------------------------------------------------
 
@@ -343,18 +328,6 @@ CREATE TABLE `procedimiento` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `procedimiento`
---
-
-INSERT INTO `procedimiento` (`id_procedimiento`, `id_enfermera`, `id_paciente`, `id_consulta`, `id_cita`, `analisis`, `evolucion`, `plan_de_cuidado`, `recomendacion`, `finalidad_procedimiento`, `cups`, `fecha_atencion`, `hora_inicio`, `hora_final`) VALUES
-('P1', 1076580427, 1091234567, 'C1', 'CP1', 'Ninguno', 'Sin cambios', 'Limpieza y desinfección diaria', 'Mantener la herida limpia y seca', 'Limpieza de la herida', '965202', '2024-05-10', '14:46:00', '15:00:00'),
-('P2', 1086343168, 1092345678, 'C2', 'CP2', 'Biopsia de la herida', 'Empeorando', 'Aplicación de apósitos', 'Aplicar vendajes adecuados', 'Prevención de infecciones', '965201', '2024-03-05', '15:52:00', '16:02:00'),
-('P3', 1060234767, 1093456789, 'C3', 'CP3', 'Cultivo bacteriano', 'Estable', 'Control de infecciones', 'Seguir las indicaciones médicas al pie de la letra', 'Estudio y diagnóstico de la herida', '965202', '2024-01-07', '08:24:00', '08:37:00'),
-('P4', 1076580427, 1094567890, 'C4', 'CP4', 'Biopsia de la herida', 'Empeorando', 'Control del dolor', 'Evitar rascarse o frotar la herida', 'Sutura de la herida', '965202', '2024-05-15', '09:53:00', '09:59:00'),
-('P5', 1086343168, 1095678901, 'C5', 'CP5', 'Biopsia de la herida', 'Estable', 'Aplicación de apósitos', 'Realizar cambios posturales para aliviar la presión en la herida', 'Estudio y diagnóstico de la herida', '965201', '2024-05-12', '10:48:00', '10:57:00'),
-('P6', 1076580427, 1093591378, 'C6', 'CP6', 'Ninguno', 'Sin cambios', 'Limpieza y desinfección diaria', 'Mantener la herida limpia y seca', 'Limpieza de la herida', '222', '2024-05-28', '21:15:00', '22:15:00');
-
---
 -- Disparadores `procedimiento`
 --
 DELIMITER $$
@@ -413,7 +386,7 @@ ALTER TABLE `cita_consulta`
 -- Indices de la tabla `cita_procedimiento`
 --
 ALTER TABLE `cita_procedimiento`
-  ADD PRIMARY KEY (`id_cita_procedimiento`),
+  ADD PRIMARY KEY (`id_cita`),
   ADD KEY `id_paciente` (`id_paciente`);
 
 --
@@ -512,7 +485,7 @@ ALTER TABLE `procedimiento`
   ADD CONSTRAINT `procedimiento_ibfk_1` FOREIGN KEY (`id_enfermera`) REFERENCES `enfermera` (`identificacion`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `procedimiento_ibfk_2` FOREIGN KEY (`id_paciente`) REFERENCES `paciente` (`identificacion`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `procedimiento_ibfk_3` FOREIGN KEY (`id_consulta`) REFERENCES `consulta` (`id_consulta`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `procedimiento_ibfk_4` FOREIGN KEY (`id_cita`) REFERENCES `cita_procedimiento` (`id_cita_procedimiento`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `procedimiento_ibfk_4` FOREIGN KEY (`id_cita`) REFERENCES `cita_procedimiento` (`id_cita`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `recepcionista`

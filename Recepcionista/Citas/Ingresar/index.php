@@ -83,7 +83,6 @@ verificarRol('recepcionista');
       <ul>
         <li><input type="submit" value="Guardar"></li>
         <li><a href="../Consultar/index.php" class="menu-principal">Consultar</a></li>
-        <li><a href="../Editar/index.php" class="menu-principal">Editar</a></li>
       </ul>
     </div>
 

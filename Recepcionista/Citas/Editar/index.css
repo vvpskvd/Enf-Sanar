@@ -39,7 +39,6 @@ ul {
 }
 
 .menu-bar {
-    background: linear-gradient(to right, #24c966, #2d8344);
     padding: 15px;
 }
 
@@ -75,12 +74,16 @@ ul {
     background-color: rgb(0, 160, 90);
 }
 
+
 .right-column {
-    background: linear-gradient(to right, #d9d9d9, #24c966);
     padding: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Tres columnas iguales */
-    grid-gap: 10px; /* Espacio entre las columnas */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 0;
 }
 
 form {
@@ -88,21 +91,7 @@ form {
     border: 1px solid #71937f;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.714);
-    display: contents; /* Permite que los divs dentro del formulario se comporten como grid items */
 }
-
-.div-form {
-    padding: 10px;
-    border: 1px solid #71937f;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.714);
-}
-
-
-h2 {
-    margin-top: 0;
-}
-
 
 fieldset {
     margin-bottom: 20px;
@@ -144,7 +133,7 @@ textarea {
 
 label+input,
 label+textarea {
-    margin-top: 5px;
+    margin: 1px;
 }
 
 .buttom-end {
@@ -179,7 +168,7 @@ label+textarea {
     cursor: pointer;
     border: none;
     padding: 10px 10px;
-    margin: 10px;
+    margin: 13px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
 }
@@ -187,4 +176,25 @@ label+textarea {
 .buttom-end input[type="submit"]:hover,
 .buttom-end ul li a:hover {
     background-color: rgb(0, 160, 90);
+}
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgb(0, 130, 78);
+    color: white;
+}
+
+tr:hover {
+    background-color: #33da57;
 }

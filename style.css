@@ -68,7 +68,7 @@ body {
 }
 
 .content-general {
-        background: linear-gradient(to bottom, #24c966, #2d8344);
+        background: linear-gradient(to bottom, rgb(127, 255, 176), rgb(73, 172, 111));
 }
 
 
