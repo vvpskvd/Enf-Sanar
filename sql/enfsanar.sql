@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-05-2024 a las 04:13:32
+-- Tiempo de generación: 03-06-2024 a las 22:03:39
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `enfsanar`
+-- Base de datos: `enfsanar2`
 --
 
 -- --------------------------------------------------------
@@ -44,8 +44,7 @@ INSERT INTO `cita_consulta` (`id_cita`, `id_paciente`, `fecha_solicitud`, `fecha
 ('CC2', 1092345678, '2024-02-25', '2024-03-02', '17:00:00'),
 ('CC3', 1093456789, '2023-12-15', '2024-01-03', '15:30:00'),
 ('CC4', 1094567890, '2024-04-23', '2024-05-10', '09:30:00'),
-('CC5', 1095678901, '2024-04-05', '2024-05-05', '18:00:00'),
-('CC6', 1093591378, '2024-05-30', '2024-05-31', '15:19:00');
+('CC5', 1095678901, '2024-04-05', '2024-05-05', '18:00:00');
 
 --
 -- Disparadores `cita_consulta`
@@ -94,8 +93,7 @@ INSERT INTO `cita_procedimiento` (`id_cita`, `id_paciente`, `fecha_solicitud`, `
 ('CP2', 1092345678, '2024-02-25', '2024-03-05', '15:50:00'),
 ('CP3', 1093456789, '2024-01-03', '2024-01-07', '08:20:00'),
 ('CP4', 1094567890, '2024-05-05', '2024-05-15', '09:50:00'),
-('CP5', 1095678901, '2024-05-10', '2024-05-12', '10:50:00'),
-('CP6', 1093591378, '2024-06-01', '2024-06-03', '17:19:00');
+('CP5', 1095678901, '2024-05-10', '2024-05-12', '10:50:00');
 
 --
 -- Disparadores `cita_procedimiento`
@@ -147,6 +145,17 @@ CREATE TABLE `consulta` (
   `hora_inicio` time DEFAULT NULL,
   `hora_final` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `consulta`
+--
+
+INSERT INTO `consulta` (`id_consulta`, `id_enfermera`, `id_paciente`, `id_cita`, `diagnostico_principal`, `motivo_consulta`, `largo`, `ancho`, `profundidad`, `forma`, `olor`, `bordes_herida`, `infeccion`, `exudado_tipo`, `exudado_nivel`, `fecha_atencion`, `hora_inicio`, `hora_final`) VALUES
+('C1', 1076580427, 1091234567, 'CC1', 'W010', 'Caída en el mismo nivel por deslizamiento, tropezón y traspié', 2, 3, 'Superficial', 'Ovalada', 'Sí', 'Regulares', 'Local', 'Seroso', 'Bajo', '2024-05-01', '16:42:00', '17:05:00'),
+('C2', 1086343168, 1092345678, 'CC2', 'S610', 'Herida de dedo(s) de la mano, sin daño de la(s) uña(s)', 4, 4, 'Parcial', 'Irregular', 'No', 'Irregulares', 'Diseminada', 'Purulento', 'Medio', '2024-03-02', '17:03:00', '17:15:00'),
+('C3', 1060234767, 1093456789, 'CC3', 'T232', 'Quemadura de la muñeca y de la mano, de segundo grado', 5, 2, 'Superficial', 'Redonda', 'No', 'Elevados', 'Local', 'Seroso', 'Alto', '2024-01-03', '15:45:00', '15:59:00'),
+('C4', 1060234767, 1094567890, 'CC4', 'W540', 'Mordedura o ataque de perro', 2, 4, 'Penetrante', 'Irregular', 'No', 'Elevados', 'Diseminada', 'Serosanguinolento', 'Medio', '2024-05-10', '09:25:00', '09:40:00'),
+('C5', 1086343168, 1095678901, 'CC5', 'N61X', 'Transtorno inflamatorio de la mama (absceso)', 3, 6, 'Superficial', 'Ovalada', 'Sí', 'Elevados', 'Local', 'Purulento', 'Alto', '2024-05-05', '18:05:00', '18:30:00');
 
 --
 -- Disparadores `consulta`
@@ -249,7 +258,6 @@ INSERT INTO `paciente` (`identificacion`, `tipo_documento`, `nombre`, `apellido`
 (1091234567, 'Cédula de extranjería', 'Juan', 'García', '310 123 4567', 'Carrera 5 # 10-15', 'Villa Nueva', '1965-09-23', 'Masculino', 'A+', 'juanpablo.gr@gmail.com', 'Profesor', 'COOMEVA', 'Casado'),
 (1092345678, 'Tarjeta de identidad', 'María', 'Martínez', '314 345 6789', 'Calle 8 # 20-25', 'San Rafael', '2008-07-15', 'Femenino', 'O-', 'mariafernanda.ml@hotmail.com', 'Matematico', 'EMS', 'Union Libre'),
 (1093456789, 'Cédula de ciudadanía', 'Carlos', 'Rodríguez', '317 567 8901', 'Avenida 3 # 15-30', 'Villa del Carmen', '1968-11-04', 'Masculino', 'B+', 'carlosandresrh@outlook.com', 'Ingeniero Mecanico', 'SISBEN - III', 'Casado'),
-(1093591378, 'Cedula', 'Carlos', 'Mantilla', '321 581 5089', 'Avenida 7', 'Cabrera', '2024-05-01', 'Masculino', 'A+', 'rodolfo20121999@hotmail.com', 'estudiante', 'na', 'na'),
 (1094567890, 'Tarjeta de identidad', 'Ana', 'López', '321 789 0123', 'Calle 12 # 25-20', 'El Contento', '2008-05-29', 'Femenino', 'AB-', 'anasofia.lp@gmail.com', 'Ingeniero Quimico', 'SISBEN - II', 'Casado'),
 (1095678901, 'Cédula de ciudadanía', 'Luis', 'Hernández', '318 901 2345', 'Avenida 7 # 10-35', 'El Salado', '1967-03-12', 'Masculino', 'A-', 'luismiguel.hg@hotmail.com', 'Juez', 'COOMEVA', 'Soltero');
 
@@ -328,6 +336,17 @@ CREATE TABLE `procedimiento` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Volcado de datos para la tabla `procedimiento`
+--
+
+INSERT INTO `procedimiento` (`id_procedimiento`, `id_enfermera`, `id_paciente`, `id_consulta`, `id_cita`, `analisis`, `evolucion`, `plan_de_cuidado`, `recomendacion`, `finalidad_procedimiento`, `cups`, `fecha_atencion`, `hora_inicio`, `hora_final`) VALUES
+('P1', 1076580427, 1091234567, 'C1', 'CP1', 'Ninguno', 'Sin cambios', 'Limpieza y desinfección diaria', 'Mantener la herida limpia y seca', 'Limpieza de la herida', '965202', '2024-05-10', '14:46:00', '15:00:00'),
+('P2', 1086343168, 1092345678, 'C2', 'CP2', 'Biopsia de la herida', 'Empeorando', 'Aplicación de apósitos', 'Aplicar vendajes adecuados', 'Prevención de infecciones', '965201', '2024-03-05', '15:52:00', '16:02:00'),
+('P3', 1060234767, 1093456789, 'C3', 'CP3', 'Cultivo bacteriano', 'Estable', 'Control de infecciones', 'Seguir las indicaciones médicas al pie de la letra', 'Estudio y diagnóstico de la herida', '965202', '2024-01-07', '08:24:00', '08:37:00'),
+('P4', 1076580427, 1094567890, 'C4', 'CP4', 'Biopsia de la herida', 'Empeorando', 'Control del dolor', 'Evitar rascarse o frotar la herida', 'Sutura de la herida', '965202', '2024-05-15', '09:53:00', '09:59:00'),
+('P5', 1086343168, 1095678901, 'C5', 'CP5', 'Biopsia de la herida', 'Estable', 'Aplicación de apósitos', 'Realizar cambios posturales para aliviar la presión en la herida', 'Estudio y diagnóstico de la herida', '965201', '2024-05-12', '10:48:00', '10:57:00');
+
+--
 -- Disparadores `procedimiento`
 --
 DELIMITER $$
@@ -380,14 +399,14 @@ INSERT INTO `recepcionista` (`identificacion`, `id_personal`) VALUES
 --
 ALTER TABLE `cita_consulta`
   ADD PRIMARY KEY (`id_cita`),
-  ADD KEY `id_paciente` (`id_paciente`);
+  ADD UNIQUE KEY `id_paciente` (`id_paciente`) USING BTREE;
 
 --
 -- Indices de la tabla `cita_procedimiento`
 --
 ALTER TABLE `cita_procedimiento`
   ADD PRIMARY KEY (`id_cita`),
-  ADD KEY `id_paciente` (`id_paciente`);
+  ADD UNIQUE KEY `id_paciente` (`id_paciente`) USING BTREE;
 
 --
 -- Indices de la tabla `consulta`

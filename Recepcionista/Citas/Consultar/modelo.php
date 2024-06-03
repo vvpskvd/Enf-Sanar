@@ -30,6 +30,7 @@ if (isset($_POST['tipo_cita'])) {
     // Construir la consulta SQL
     $sql = "SELECT * FROM $tabla WHERE 1=1";
 
+    //se concatena los datos a filtrar en $sql
     if ($id_cita) {
         $sql .= " AND id_cita = '$id_cita'";
     }
@@ -50,10 +51,13 @@ if (isset($_POST['tipo_cita'])) {
         $sql .= " AND hora_programada LIKE '$hora_programada%'";
     }
 
+    // Ejecutar la consulta
     $result = $mysqli->query($sql);
 
+
+    // Verificar si hay resultados
     if ($result->num_rows > 0) {
-        // Generar las filas de la tabla
+        // Generar las filas de la tabla con los resultados
         while ($row = $result->fetch_assoc()) {
             $params = [
                 'tipo_cita' => $tipo_cita,

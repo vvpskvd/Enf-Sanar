@@ -5,14 +5,15 @@
     font-size: 100%;
     vertical-align: baseline;
     box-sizing: border-box;
+    font-family:  'Times New Roman', Times, serif;
+
 }
 
 body {
     text-align: center;
-    font-family: sans-serif;
 }
 
-.head {
+.menu-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,7 +24,7 @@ body {
     z-index: 100;
 }
 
-.navbar {
+.menu {
     display: flex;
     justify-content: flex-end;
     align-items: center; 
@@ -31,7 +32,7 @@ body {
     margin-right: 20px;
 }
 
-.navbar a {
+.menu a {
     display: block;
     padding: 15px 20px; 
     color: black; 
@@ -42,7 +43,7 @@ body {
     text-decoration: none;
 }
 
-.navbar a:hover {
+.menu a:hover {
     background: #07E109;
 }
 
@@ -53,7 +54,7 @@ body {
     font-size: 20px;
 }
 
-.content-header, .content-services, .content-about, .content-contact {
+.contenido-inicio, .contenido-servicios, .contenido-nosotros, .contenido-contacto {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -62,17 +63,16 @@ body {
     padding: 250px; 
 }
 
-.content-general p {
+.contenido-general {
+    background: linear-gradient(to bottom, rgb(127, 255, 176), rgb(73, 172, 111));
+}
+
+.contenido-general p {
     font-size: 20px;
     line-height: 1.5;
 }
 
-.content-general {
-        background: linear-gradient(to bottom, rgb(127, 255, 176), rgb(73, 172, 111));
-}
-
-
-.title-efnsanar {
+.titulo-efnsanar {
     display: block;
     padding: 15px 20px; 
     color: black;
@@ -81,7 +81,7 @@ body {
     font-weight: bold;
 }
 
-.title-header{
+.titulo-secciones{
     margin-bottom: 30px;
     font-size: 80px;
     font-weight: 600;
@@ -128,8 +128,6 @@ p {
     margin: 0 auto;
 }
 
-
-
 .logo {
     width: 100px;
     height: 70px;
@@ -146,8 +144,6 @@ p {
     object-fit: contain; 
     object-position: center; 
 }
-
-
 
 /* Resoulucion para pantalla 768*/
 @media (max-width: 768px) {

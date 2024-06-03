@@ -1,4 +1,7 @@
 <?php
+include '../../../recepcionista/validar_sesion.php';
+verificarRol('recepcionista');
+
 include ("modelo.php");
 ?>
 
@@ -9,33 +12,26 @@ include ("modelo.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Cita - EnfSanar</title>
+    <title>Editar Paciente</title>
     <link rel="icon" href="../../../Img/LogoImageWeb.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
 
-    <div class="menu-bar">
+    <nav class="container">
 
-        <nav class="container">
-            <div class="left-column">
+        <div class="box-menu">
 
-                <div class="logo">
-                    <a href="../../../Recepcionista/index.php">
-                        <img src="../../../Img/LogoImageWEB.png" alt="Image"></a>
-                </div>
-
-                <ul>
-                    <li><a href="../ingresar/index.php" class="menu-principal">Citas</a></li>
-                    <li><a href="../../../Recepcionista/Pacientes/ingresar/index.php" class="menu-principal">Pacientes</a></li>
-                    <li><a href="../../../login/logout.php" class="menu-principal">Cerrar Sesión</a></li>
-                </ul>
+            <div class="logo">
+                    <img src="../../../Img/LogoImageWEB.png" alt="Image"></a>
             </div>
-        </nav>
-    </div>
 
-    <div class="right-column container-form">
+        </div>
+
+    </nav>
+
+    <div class="container-form">
 
         <form action="modelo.php"  method="post">
 
@@ -45,45 +41,60 @@ include ("modelo.php");
                     <legend>Editar Paciente</legend>
                     <input type="hidden" name="identificacion" value="<?php echo $identificacion; ?>">
 
+                    <label for="tipo_documento">Tipo de documento:</label>
+                    <input type="text" name="tipo_documento" value="<?php echo $tipo_documento; ?>">
+
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" value="<?php echo $nombre; ?>"><br><br>
+                    <input type="text" name="nombre" value="<?php echo $nombre; ?>">
 
                     <label for="apellido">Apellido:</label>
-                    <input type="text" name="apellido" value="<?php echo $apellido; ?>"><br><br>
+                    <input type="text" name="apellido" value="<?php echo $apellido; ?>">
 
                     <label for="telefono">Teléfono:</label>
-                    <input type="text" name="telefono" value="<?php echo $telefono; ?>"><br><br>
+                    <input type="text" name="telefono" value="<?php echo $telefono; ?>">
                     
                     <label for="direccion">Dirección:</label>
-                    <input type="text" name="direccion" value="<?php echo $direccion; ?>"><br><br>
+                    <input type="text" name="direccion" value="<?php echo $direccion; ?>">
                     
                     <label for="barrio">Barrio:</label>
-                    <input type="text" name="barrio" value="<?php echo $barrio; ?>"><br><br>
+                    <input type="text" name="barrio" value="<?php echo $barrio; ?>">
+
+                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" name="fecha_nacimiento" value="<?php echo $fecha_nacimiento; ?>">
+                </fieldset>
+            </div>
+
+            <div class="div-form">
+
+                <fieldset>
+                    <legend> </legend>
+                    <label for="sexo">Sexo:</label>
+                    <input type="text" name="sexo" value="<?php echo $sexo; ?>">
+
+                    <label for="tipo_sangre">Tipo de Sangre:</label>
+                    <input type="text" name="tipo_sangre" value="<?php echo $tipo_sangre; ?>">
                     
                     <label for="correo">Correo:</label>
-                    <input type="text" name="correo" value="<?php echo $correo; ?>"><br><br>
+                    <input type="text" name="correo" value="<?php echo $correo; ?>">
                     
                     <label for="ocupacion">Ocupación:</label>
-                    <input type="text" name="ocupacion" value="<?php echo $ocupacion; ?>"><br><br>
+                    <input type="text" name="ocupacion" value="<?php echo $ocupacion; ?>">
 
                     <label for="entidad">Entidad:</label>
-                    <input type="text" name="entidad" value="<?php echo $entidad; ?>"><br><br>
+                    <input type="text" name="entidad" value="<?php echo $entidad; ?>">
 
                     <label for="estado_civil">Estado Civil:</label>
-                    <input type="text" name="estado_civil" value="<?php echo $estado_civil; ?>"><br><br>
+                    <input type="text" name="estado_civil" value="<?php echo $estado_civil; ?>">
                 </fieldset>
             </div>
     </div>
 
-            <div class="menu-bar">
-                <div class="buttom-end">
+            <div class="buttom-end">
                     <ul>
-                    <li><input type="submit" name="actualizar" value="Actualizar"></li>
-                    <input type="submit" name="eliminar" value="Eliminar">
-                    <li><a href="../Consultar/index.php" class="menu-principal">Atrás</a></li>
-
+                        <li><input type="submit" name="actualizar" value="Actualizar"></li>
+                        <li><input type="submit" name="eliminar" value="Eliminar"></li>
+                        <li><a href="../Consultar/index.php" class="menu-principal" onclick="window.close()">Cerrar</a></li>
                     </ul>
-                </div>
             </div>
 
         </form>

@@ -1,4 +1,17 @@
-<?php include '../../login/validar_sesion.php';
+<?php
+
+session_start();
+
+function verificarRol($rolPermitido) {
+    if (!isset($_SESSION["usuario"])) {
+        header("location:../../login/login.php");
+        exit;
+    } elseif ($_SESSION["rol"] != $rolPermitido) {
+        header("location:../../login/login.php");
+        exit;
+    }
+}
+
 verificarRol('enfermera');
 ?>
 
@@ -15,27 +28,28 @@ verificarRol('enfermera');
 
 <body>
 
-    <div class="menu-bar">
+    <nav class="container">
 
-        <nav class="container">
-            <div class="left-column">
+        <div class="box-menu">
 
-                <div class="logo">
-                    <a href="../../Enfermera/index.php">
-                        <img src="../../Img/LogoImageWEB.png" alt="Image"></a>
-                </div>
-
-                <ul>
-                <li><a href="../../Enfermera/F_Consulta/ingresar/index.php" class="menu-principal">Consulta</a></li>
-                    <li><a href="../../Enfermera/F_Procedimiento/ingresar/index.php" class="menu-principal">Procedimiento</a></li>
-                    <li><a href="index.php" class="menu-principal">Ver Citas</a></li>
-                    <li><a href="../../Login/logout.php" class="menu-principal">Cerrar Sesión</a></li>
-                </ul>
+            <div class="logo">
+                <a href="../../Enfermera/index.php">
+                    <img src="../../Img/LogoImageWEB.png" alt="Image"></a>
             </div>
-        </nav>
-    </div>
 
-    <div class="right-column">
+            <ul class="menu-principal">
+                <li><a href="../../Enfermera/F_Consulta/ingresar/index.php" class="menu-principal">Consulta</a></li>
+                <li><a href="../../Enfermera/F_Procedimiento/ingresar/index.php" class="menu-principal">Procedimiento</a></li>
+                <li><a href="index.php" class="menu-principal">Ver Citas</a></li>
+                <li><a href="../../Login/logout.php" class="menu-principal">Cerrar Sesión</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <div class="container-form">
 
         <form action="index.php" method="post">
 
@@ -80,7 +94,6 @@ verificarRol('enfermera');
                             <th>Fecha Solicitud</th>
                             <th>Fecha Programada</th>
                             <th>Hora Programada</th>
-                            <th>Editar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -98,12 +111,10 @@ verificarRol('enfermera');
 
     </div>
 
-        <div class="menu-bar">
-            <div class="buttom-end">
+        <div class="buttom-end">
             <ul>
-            <li><input type="submit" value="Consultar"></li>
+                <li><input type="submit" value="Consultar"></li>
             </ul>
-            </div>
         </div>
 
     </form>

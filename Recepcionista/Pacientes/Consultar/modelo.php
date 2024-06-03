@@ -53,11 +53,15 @@ if (isset($_POST['identificacion'])) {
             $params = [
 
                 'identificacion' => $row['identificacion'],
+                'tipo_documento' => $row['tipo_documento'],
                 'nombre' => $row['nombre'],
                 'apellido' => $row['apellido'],
                 'telefono' => $row['telefono'],
                 'direccion' => $row['direccion'],
                 'barrio' => $row['barrio'],
+                'fecha_nacimiento' => $row['fecha_nacimiento'],
+                'sexo' => $row['sexo'],
+                'tipo_sangre' => $row['tipo_sangre'],
                 'correo' => $row['correo'],
                 'ocupacion' => $row['ocupacion'],
                 'entidad' => $row['entidad'],
@@ -71,11 +75,15 @@ if (isset($_POST['identificacion'])) {
 
             echo "<tr>
                     <td>" . $row["identificacion"] . "</td>
+                    <td>" . $row["tipo_documento"] . "</td>
                     <td>" . $row["nombre"] . "</td>
                     <td>" . $row["apellido"] . "</td>
                     <td>" . $row["telefono"] . "</td>
                     <td>" . $row["direccion"] . "</td>
                     <td>" . $row["barrio"] . "</td>
+                    <td>" . $row["fecha_nacimiento"] . "</td>
+                    <td>" . $row["sexo"] . "</td>
+                    <td>" . $row["tipo_sangre"] . "</td>
                     <td>" . $row["correo"] . "</td>
                     <td>" . $row["ocupacion"] . "</td>
                     <td>" . $row["entidad"] . "</td>

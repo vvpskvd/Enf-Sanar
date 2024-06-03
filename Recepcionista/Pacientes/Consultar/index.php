@@ -1,36 +1,33 @@
+<?php include '../../../recepcionista/validar_sesion.php';
+verificarRol('recepcionista');
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de Pacientes - EnfSanar</title>
+    <title>Consultar Pacientes</title>
     <link rel="icon" href="../../../Img/LogoImageWeb.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
 
-    <div class="menu-bar">
+    <nav class="container">
 
-        <nav class="container">
-            <div class="left-column">
+        <div class="box-menu">
 
-                <div class="logo">
-                    <a href="../../../Recepcionista/index.php">
-                        <img src="../../../Img/LogoImageWEB.png" alt="Image"></a>
-                </div>
-
-                <ul>
-                    <li><a href="../ingresar/index.php" class="menu-principal">Citas</a></li>
-                    <li><a href="../../../Recepcionista/Pacientes/ingresar/index.php" class="menu-principal">Pacientes</a></li>
-                    <li><a href="../../../login/logout.php" class="menu-principal">Cerrar Sesión</a></li>
-                </ul>
+            <div class="logo">
+                <img src="../../../Img/LogoImageWEB.png" alt="Image"></a>
             </div>
-        </nav>
-    </div>
+        </div>
 
-    <div class="right-column">
+    </nav>
+
+    <div class="container-form">
 
         <form action="index.php" method="post">
 
@@ -61,56 +58,60 @@
             </div>
 
         <!-- Tabla para mostrar resultados -->
-        <div class="div-form">
-            <fieldset>
-                <legend>Resultados de la Consulta</legend>
+            <div class="div-form">
+                <fieldset>
+                    <legend>Resultados de la Consulta</legend>
 
-            <div class="tabla-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Identificación</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Teléfono</th>
-                            <th>Dirección</th>
-                            <th>Barrio</th>
-                            <th>Correo</th>
-                            <th>Ocupación</th>
-                            <th>Entidad</th>
-                            <th>Estado Civil</th>
-                            <th>Editar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Aquí se insertarán los resultados desde PHP -->
-                        <?php
-                        if (isset($_POST['identificacion']) || isset($_POST['nombre']) || isset($_POST['apellido']) 
-                        || isset($_POST['telefono']) || isset($_POST['direccion']) || isset($_POST['barrio']) 
-                        || isset($_POST['correo']) || isset($_POST['ocupacion']) || isset($_POST['entidad']) 
-                        || isset($_POST['estad_civil'])) {
-                            include 'modelo.php';
-                        }
-                        ?>
-                    </tbody>
-                </table>
+                <div class="tabla-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Identificación</th>
+                                <th>Tipo Documento</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Teléfono</th>
+                                <th>Dirección</th>
+                                <th>Barrio</th>
+                                <th>Fecha Nacimiento</th>
+                                <th>Sexo</th>
+                                <th>Tipo Sangre</th>
+                                <th>Correo</th>
+                                <th>Ocupación</th>
+                                <th>Entidad</th>
+                                <th>Estado Civil</th>
+                                <th>Editar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Aquí se insertarán los resultados desde PHP -->
+                            <?php
+                            if (isset($_POST['identificacion']) || isset($_POST['tipo_documento']) || isset($_POST['nombre']) 
+                            || isset($_POST['apellido']) || isset($_POST['telefono']) || isset($_POST['direccion']) 
+                            || isset($_POST['barrio']) || isset($_POST['fecha_nacimiento']) || isset($_POST['sexo']) 
+                            || isset($_POST['tipo_sangre']) || isset($_POST['correo']) || isset($_POST['ocupacion']) 
+                            || isset($_POST['entidad']) || isset($_POST['estad_civil'])) {
+                                include 'modelo.php';
+                            }
+                            ?>
+                        </tbody>
+                    </table>
 
+                </div>
+
+                </fieldset>
             </div>
-
-            </fieldset>
-        </div>
 
     </div>
 
-        <div class="menu-bar">
             <div class="buttom-end">
-            <ul>
-            <li><input type="submit" value="Consultar"></li>
-            </ul>
+                <ul>
+                    <li><input type="submit" value="Consultar"></li>
+                    <li><a href="../Ingresar/index.php" class="menu-principal" onclick='window.close();'>Cerrar</a></li>
+                </ul>
             </div>
-        </div>
 
-    </form>
+        </form>
 
 </body>
 

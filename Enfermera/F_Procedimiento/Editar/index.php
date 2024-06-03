@@ -1,83 +1,109 @@
+<?php
+include '../../../enfermera/validar_sesion.php';
+verificarRol('enfermera');
+
+include ("modelo.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Cita - EnfSanar</title>
+    <title>Editar Procedimiento Médico - EnfSanar</title>
     <link rel="icon" href="../../../Img/LogoImageWeb.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
 
-    <div class="menu-bar">
+    <nav class="container">
 
-        <nav class="container">
-            <div class="left-column">
+        <div class="box-menu">
 
-                <div class="logo">
-                    <a href="../../../Recepcionista/index.php">
-                        <img src="../../../Img/LogoImageWEB.png" alt="Image"></a>
-                </div>
-
-                <ul>
-                    <li><a href="../ingresar/index.php" class="menu-principal">Citas</a></li>
-                    <li><a href="../../../Recepcionista/Pacientes/ingresar/index.php" class="menu-principal">Pacientes</a></li>
-                    <li><a href="../../../login/logout.php" class="menu-principal">Cerrar Sesión</a></li>
-                </ul>
+            <div class="logo">
+                <a href="../../../enfermera/index.php">
+                    <img src="../../../Img/LogoImageWEB.png" alt="Image"></a>
             </div>
-        </nav>
-    </div>
 
-    <div class="right-column">
+        </div>
 
-        <form action="guardar_edicion.php" method="post">
+    </nav>
+
+
+    <div class="container-form">
+
+        <form action="modelo.php"  method="post">
 
             <div class="div-form">
 
                 <fieldset>
-                    <legend>Editar Cita</legend>
+                    <legend>Editar Procedimiento Médico</legend>
 
-                    <!-- Campo oculto para almacenar el ID de la cita a editar -->
-                    <input type="hidden" id="id_cita" name="id_cita" value="<?php echo $_GET['id']; ?>">
+                    <input type="hidden" name="id_procedimiento" value="<?php echo $id_procedimiento; ?>">
 
-                    <!-- Los demás campos del formulario con valores predefinidos obtenidos de la base de datos -->
-                    <label>Tipo de Cita:</label>
-                    <select id="tipo_cita" name="tipo_cita">
-                        <option value="consulta">Consulta</option>
-                        <option value="procedimiento">Procedimiento</option>
-                    </select>
+                    <label for="id_consulta">ID Cita:</label>
+                    <input type="text" name="id_consulta" value="<?php echo $id_consulta; ?>">
 
-                    <label>ID de la cita:</label>
-                    <input type="text" id="id_cita" name="id_cita" value="<?php echo $row['id_cita']; ?>" readonly>
+                    <label for="id_cita">ID Cita:</label>
+                    <input type="text" name="id_cita" value="<?php echo $id_cita; ?>">
+                    <label for="id_enfermera">ID Enfermera:</label>
+                    <input type="text" name="id_enfermera" value="<?php echo $id_enfermera; ?>">
+                    <label for="id_paciente">ID Paciente:</label>
+                    <input type="text" name="id_paciente" value="<?php echo $id_paciente; ?>">
 
-                    <label>Identificación del Paciente:</label>
-                    <input type="number" id="id_paciente" name="id_paciente" value="<?php echo $row['id_paciente']; ?>">
+                    <label for="analisis">Análisis:</label>
+                    <input type="text" name="analisis" value="<?php echo $analisis; ?>">
 
-                    <label>Fecha de Solicitud:</label>
-                    <input type="date" id="fecha_solicitud" name="fecha_solicitud" value="<?php echo $row['fecha_solicitud']; ?>">
+                    <label for="evolucion">Evolución:</label>
+                    <input type="text" name="evolucion" value="<?php echo $evolucion; ?>">
 
-                    <label>Fecha de Programación:</label>
-                    <input type="date" id="fecha_programada" name="fecha_programada" value="<?php echo $row['fecha_programada']; ?>">
-
-                    <label>Hora Programada:</label>
-                    <input type="time" id="hora_programada" name="hora_programada" value="<?php echo $row['hora_programada']; ?>">
+                    <label for="plan_de_cuidado">Plan de Cuidado:</label>
+                    <input type="text" name="plan_de_cuidado" value="<?php echo $plan_de_cuidado; ?>">
                 </fieldset>
 
             </div>
 
-            <div class="menu-bar">
-                <div class="buttom-end">
-                    <ul>
-                        <li><input type="submit" value="Guardar Cambios"></li>
-                    </ul>
-                </div>
+                <div class="div-form">
+
+                    <fieldset>
+                        <legend> </legend>
+                        <label for="recomendacion">Recomendación:</label>
+                        <input type="text" name="recomendacion" value="<?php echo $recomendacion; ?>">
+
+                        <label for="finalidad_procedimiento">Finalidad del Procedimiento:</label>
+                        <input type="text" name="finalidad_procedimiento" value="<?php echo $finalidad_procedimiento; ?>">
+
+                        <label for="cups">CUPS:</label>
+                        <input type="text" name="cups" value="<?php echo $cups; ?>">
+
+                        <label for="fecha_atencion">Fecha de Atención:</label>
+                        <input type="text" name="fecha_atencion" value="<?php echo $fecha_atencion; ?>">
+
+                        <label for="hora_inicio">Hora de Inicio:</label>
+                        <input type="text" name="hora_inicio" value="<?php echo $hora_inicio; ?>">
+
+                        <label for="hora_final">Hora de Finalización:</label>
+                        <input type="text" name="hora_final" value="<?php echo $hora_final; ?>">
+                </fieldset>
+                
+            </div>
+    </div>
+
+            <div class="buttom-end">
+
+                <ul>
+                    <li><input type="submit" name="actualizar" value="Actualizar"></li>
+                    <li><input type="submit" name="eliminar" value="Eliminar"></li>
+                    <li><a href="../Consultar/index.php" class="menu-principal" onclick="window.close()">Cerrar</a></li>
+                </ul>
+
             </div>
 
         </form>
 
-    </div>
 
 </body>
 

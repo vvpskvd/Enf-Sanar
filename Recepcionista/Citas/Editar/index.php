@@ -1,4 +1,6 @@
-<?php
+<?php include '../../../recepcionista/validar_sesion.php';
+verificarRol('recepcionista');
+
 include ("modelo.php");
 ?>
 
@@ -9,67 +11,55 @@ include ("modelo.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Cita - EnfSanar</title>
+    <title>Editar Cita Médica</title>
     <link rel="icon" href="../../../Img/LogoImageWeb.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
 
-    <div class="menu-bar">
+    <nav class="container">
 
-        <nav class="container">
-            <div class="left-column">
+        <div class="box-menu">
 
-                <div class="logo">
-                    <a href="../../../Recepcionista/index.php">
-                        <img src="../../../Img/LogoImageWEB.png" alt="Image"></a>
-                </div>
-
-                <ul>
-                    <li><a href="../ingresar/index.php" class="menu-principal">Citas</a></li>
-                    <li><a href="../../../Recepcionista/Pacientes/ingresar/index.php" class="menu-principal">Pacientes</a></li>
-                    <li><a href="../../../login/logout.php" class="menu-principal">Cerrar Sesión</a></li>
-                </ul>
+            <div class="logo">
+                    <img src="../../../Img/LogoImageWEB.png" alt="Image"></a>
             </div>
-        </nav>
-    </div>
 
-    <div class="right-column container-form">
+        </div>
+
+    </nav>
+
+    <div class="container-form">
 
         <form action="modelo.php"  method="post">
 
-            <div class="div-form">
+            <fieldset>
+                <legend>Editar Cita</legend>
+                <input type="hidden" name="tipo_cita" value="<?php echo $tipo_cita; ?>">
+                <input type="hidden" name="id_cita" value="<?php echo $id_cita; ?>">
 
-                <fieldset>
-                    <legend>Editar Cita</legend>
-                    <input type="hidden" name="tipo_cita" value="<?php echo $tipo_cita; ?>">
-                    <input type="hidden" name="id_cita" value="<?php echo $id_cita; ?>">
+                <label for="id_paciente">ID Paciente:</label>
+                <input type="text" name="id_paciente" value="<?php echo $id_paciente; ?>"><br><br>
 
-                    <label for="id_paciente">ID Paciente:</label>
-                    <input type="text" name="id_paciente" value="<?php echo $id_paciente; ?>"><br><br>
+                <label for="fecha_solicitud">Fecha de Solicitud:</label>
+                <input type="date" name="fecha_solicitud" value="<?php echo $fecha_solicitud; ?>"><br><br>
 
-                    <label for="fecha_solicitud">Fecha de Solicitud:</label>
-                    <input type="date" name="fecha_solicitud" value="<?php echo $fecha_solicitud; ?>"><br><br>
-
-                    <label for="fecha_programada">Fecha Programada:</label>
-                    <input type="date" name="fecha_programada" value="<?php echo $fecha_programada; ?>"><br><br>
-                    
-                    <label for="hora_programada">Hora Programada:</label>
-                    <input type="time" name="hora_programada" value="<?php echo $hora_programada; ?>"><br><br>
-                    
-                </fieldset>
-            </div>
+                <label for="fecha_programada">Fecha Programada:</label>
+                <input type="date" name="fecha_programada" value="<?php echo $fecha_programada; ?>"><br><br>
+                
+                <label for="hora_programada">Hora Programada:</label>
+                <input type="time" name="hora_programada" value="<?php echo $hora_programada; ?>"><br><br>
+                
+            </fieldset>
     </div>
 
-            <div class="menu-bar">
-                <div class="buttom-end">
+            <div class="buttom-end">
                     <ul>
-                    <li><input type="submit" name="actualizar" value="Actualizar"></li>
-                    <input type="submit" name="eliminar" value="Eliminar">
-                    <li><a href="../Consultar/index.php" class="menu-principal">Atrás</a></li>
+                        <li><input type="submit" name="actualizar" value="Actualizar"></li>
+                        <li><input type="submit" name="eliminar" value="Eliminar"></li>
+                        <li><a href="../Consultar/index.php" class="menu-principal" onclick='window.close();'>Cerrar</a></li>
                     </ul>
-                </div>
             </div>
 
         </form>

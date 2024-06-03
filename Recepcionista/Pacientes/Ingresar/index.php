@@ -1,4 +1,4 @@
-<?php include '../../../login/validar_sesion.php';
+<?php include '../../../recepcionista/validar_sesion.php';
 verificarRol('recepcionista');
 ?>
 
@@ -8,33 +8,33 @@ verificarRol('recepcionista');
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EnfSanar</title>
+  <title>Ingresar Pacientes</title>
   <link rel="icon" href="../../../Img/LogoImageWeb.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
 
-  <div class="menu-bar">
+  <nav class="container">
 
-    <nav class="container">
-      <div class="left-column">
+  <div class="box-menu">
 
-        <div class="logo">
+      <div class="logo">
           <a href="../../../Recepcionista/index.php">
-            <img src="../../../Img/LogoImageWEB.png" alt="Image"></a>
-        </div>
-
-        <ul>
-          <li><a href="../../../Recepcionista/Citas/ingresar/index.php" class="menu-principal">Citas</a></li>
-          <li><a href="index.php" class="menu-principal">Pacientes</a></li>
-          <li><a href="../../../login/logout.php" class="menu-principal">Cerrar Sesión</a></li>
-        </ul>
+              <img src="../../../Img/LogoImageWEB.png" alt="Image"></a>
       </div>
-    </nav>
+
+      <ul class="menu-principal">
+          <li><a href="../../../Recepcionista/Citas/Ingresar/index.php">Citas</a></li>
+          <li><a href="index.php">Pacientes</a></li>
+          <li><a href="../../../login/logout.php">Cerrar Sesión</a></li>
+      </ul>
+
   </div>
 
-  <div class="right-column">
+  </nav>
+
+  <div class="container-form">
 
     <form action="modelo.php" method="post">
 
@@ -49,8 +49,12 @@ verificarRol('recepcionista');
             <label>Apellido:</label>
             <input type="text" id="apellido" name="apellido" placeholder="Ingresar primer apelldio">
 
-            <label>Tipo de documento:</label>
-            <input type="text" id="tipo_documento" name="tipo_documento" placeholder="Ingresar el tipo de docoumento">
+            <label for="tipo_documento">Tipo de documento:</label>
+            <select id="tipo_documento" name="tipo_documento"> 
+              <option value="Cédula de ciudadania">Cédula de ciudadania</option>
+              <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+              <option value="Cédula de extranjería">Cédula de extranjería</option>
+            </select>
 
             <label>Identificación:</label>
             <input type="number" id="identificacion" name="identificacion" placeholder="Ingresar numero de identidad">
@@ -82,11 +86,23 @@ verificarRol('recepcionista');
             <label>Fecha de nacimiento:</label>
             <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="Ingresar fecha de nacimiento ">
 
-            <label>Sexo:</label>
-            <input type="text" id="sexo" name="sexo" placeholder="Ingresar el sexo">
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo"> 
+              <option value="femenino">Femenino</option>
+              <option value="masculino">Masculino</option>
+            </select>
 
-            <label>Tipo de sangre:</label>
-            <input type="text" id="tipo_sangre" name="tipo_sangre" placeholder="Ingresar el tipo de sangre">
+            <label for="tipo_sangre">Tipo de sangre:</label>
+            <select id="tipo_sangre" name="tipo_sangre">
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
 
             <label>Correo:</label>
             <input type="text" id="correo" name="correo" placeholder="Ingresar el correo electrónico">
@@ -96,14 +112,12 @@ verificarRol('recepcionista');
 
   </div>
 
-      <div class="menu-bar">
+      <div class="buttom-end">
 
-        <div class="buttom-end">
           <ul>
             <li><input type="submit" value="Guardar"></li>
-            <li><a href="../Consultar/index.php" class="menu-principal">Consultar</a></li>
+            <li><a href="../Consultar/index.php" class="menu-principal" target="_blank">Consultar</a></li>
           </ul>
-        </div>
 
       </div>
 

@@ -1,5 +1,5 @@
 * {
-    font-family: "Reddit Sans", sans-serif;
+    font-family:  'Times New Roman', Times, serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -13,17 +13,24 @@ ul {
     list-style: none;
 }
 
-/*estructura de la pagina*/
 .container {
     margin: 0 auto;
     width: 80%;
 }
 
+.image-wrapper {
+    padding-top: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo {
     max-width: 450px;
-    max-height: 350px;
-    width: 60px;
-    height: 60px;
+    max-height: 450px;
+    width: 70px;
+    height: 70px;
 }
 
 .logo img {
@@ -33,29 +40,25 @@ ul {
     object-position: center;
 }
 
-.menu-bar {
-    background: linear-gradient(to right, #24c966, #2d8344);
-    padding: 15px;
-}
-
-.left-column {
+.box-menu {
     background: linear-gradient(to right, #24c966, #D9D9D9);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
     padding: 15px;
     border: 1px solid #ccc;
 }
 
-.left-column ul {
+.box-menu ul {
     display: flex;
     justify-items: end;
     align-items: center;
 }
 
-.menu-principal {
+.menu-principal a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
     display: inline-block;
     margin: 5px;
     padding: 8px 10px;
@@ -64,30 +67,23 @@ ul {
     text-decoration: none;
     border-radius: 10px;
     transition: background-color 0.3s ease;
+    display: inline-block;
 }
 
-.menu-principal:hover {
+.menu-principal a:hover {
     background-color: rgb(0, 160, 90);
+    transform: translateY(-3px);
 }
 
-h2 {
-    margin-top: 0;
-}
-
-.right-column {
+.container-form {
     background: linear-gradient(to right, #d9d9d9, #24c966);
-    padding: 15px;
+    padding: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas iguales */
-    grid-gap: 10px; /* Espacio entre las columnas */
-}
-
-form {
-    padding: 10px;
-    border: 1px solid #71937f;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.714);
-    display: contents; /* Permite que los divs dentro del formulario se comporten como grid items */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 30px auto;
+    width: 98%;
+    border-radius: 20px;
 }
 
 .div-form {
@@ -97,7 +93,14 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.714);
 }
 
-
+form {
+    padding: 10px;
+    border: 1px solid #71937f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.714);
+    display: contents; 
+    font-size: 17px;
+}
 
 fieldset {
     margin-bottom: 20px;
@@ -114,6 +117,7 @@ legend {
     color: white;
     border-radius: 10px;
     padding: 10px;
+    font-size: 20px;
 }
 
 label {
@@ -121,24 +125,27 @@ label {
     margin-bottom: 2px;
 }
 
-input,
-textarea,
-select {
-    width: 80%;
-    padding: 7px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input, select {
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 10px;
+    font-size: 15px;
+    width: 90%;
+    background-color: white;
+    color: #333;
+    transition: border-color 0.3s, background-color 0.3s;
 }
 
-
-textarea {
-    height: 100px;
+input:focus, select:focus {
+    border-color: #2d8344;
+    outline: none; 
 }
 
-
-label+input,
-label+textarea {
+label+input {
     margin-top: 5px;
 }
 
@@ -149,37 +156,31 @@ label+textarea {
     background: linear-gradient(to right, #24c966, #D9D9D9);
     padding: 5px;
     border: 1px solid #ccc;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     width: 40%;
 }
 
-.buttom-end ul {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-}
-
-.buttom-end ul li {
+.buttom-end li {
     display: inline-block;
     margin: 15px 15px;
 }
 
-.buttom-end input[type="submit"],
-.buttom-end ul li a {
+.buttom-end input, .buttom-end a {
     background-color: rgb(0, 130, 78);
     color: white;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
     border: none;
     padding: 10px 10px;
     margin: 10px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
+    display: inline-block;
 }
 
-.buttom-end input[type="submit"]:hover,
-.buttom-end ul li a:hover {
+.buttom-end input:hover,.buttom-end a:hover {
     background-color: rgb(0, 160, 90);
+    transform: translateY(-3px);
 }
