@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,101 +8,127 @@
     <title>EnfSanar</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class = "menu-head">
-        
-        <!--Seccion Logo web-->
-        <a class="logo">
-            <img src="../EnfSanar/Img/LogoImageWeb.png" alt="Image" style="width:60px; height:60px;">
-        </a>
-        
-        <a class="titulo-efnsanar">EnfSanar</a>
-        
-        <!--Seccion Menu Home-->
-        <nav class="menu"> 
-            <a href="#inicio">Inicio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
-            <a href="Login/login.php">Login</a> 
-        </nav>
-        
-    </div>
-    
-    <!--Seccion Contenido General-->
-    <div class="contenido-general">
 
-        <header class="contenido-inicio" id="inicio">
-            <h2 class="titulo-secciones">Enfsanar S.A.S</h2>
-                <p>
-                    Sanando tus heridas, restaurando tu bienestar.
-                </br>
-                </br>
-                    En EnfSanar SAS, entendemos que las heridas pueden afectar tanto física como emocionalmente. 
-                    Es por eso que nos dedicamos a brindar una atención integral y especializada para ayudarte a sanar por completo. 
-                    Nuestro equipo multidisciplinario de expertos está aquí para ofrecerte el cuidado que necesitas en cada paso del camino.
-                </p>
-        </header>
-        
-        
-        <!--Seccion Servicios-->
-        <section class="contenido-servicios" id="servicios">
-            <h2 class="titulo-secciones">Servicios</h2>
-            <p> 
-                En EnfSanar SAS, nos especializamos en el tratamiento de una amplia gama de heridas de la piel y subcutáneas. Nuestro equipo de expertos está dedicado a proporcionar la atención integral que necesitas para una pronta recuperación. Algunos de nuestros servicios incluyen:
-            </br></br>
-                - Evaluación y diagnóstico preciso.
-            </br></br>  
-                - Tratamientos avanzados.
-            </br></br> 
-                - Terapia de manejo del dolor.
-            </br></br> 
-                - Educación y asesoramiento.
-            </p>
-        </section>
-        
-        
-        <!--Seccion Vision y Mision-->
-        <section class="contenido-nosotros" id="nosotros">
-            <h2 class="titulo-secciones"> Nosotros </h2>
-                <p>
-                    En EnfSanar SAS, nos guiamos por una clara misión y visión que define nuestro propósito y orienta nuestras acciones hacia el futuro.
-                </p>
-                    <div class="box-container">
-                        
-                        <div class="box"> 
-                            <h3>Mision</h3>
-                                <p>
-                                    En EnfSanar SAS, nuestra misión es proporcionar un cuidado integral y especializado a pacientes 
-                                    que sufren de heridas de la piel y subcutáneas. Nos comprometemos a ofrecer tratamientos avanzados,
-                                    personalizados y compasivos, con el objetivo de promover una cicatrización rápida y completa, y mejorar la calidad de vida de nuestros pacientes. 
-                                    Nos esforzamos por ser líderes en la atención de heridas, manteniendo los más altos estándares de excelencia médica, 
-                                    ética profesional y servicio al cliente.
-                                </p>
-                        </div>
-                        
-                        <br>  
-                            <div class="box">
-                                <h3>Vision</h3>
-                                    <p>
-                                        Nuestra visión es ser reconocidos como la clínica de referencia en el tratamiento de heridas, 
-                                        tanto a nivel local como nacional. Nos esforzamos por ser pioneros en la aplicación de tecnologías 
-                                        innovadoras y en el desarrollo de enfoques multidisciplinarios para el cuidado de heridas. 
-                                        Aspiramos a ser un centro de excelencia donde los pacientes encuentren esperanza, curación y apoyo 
-                                        integral para superar sus heridas y recuperar su bienestar físico, emocional y social.
-                                    </p>
-                            </div>
-                    </div>
-        </section>
-        
-        <!--Seccion Contacto-->
-        <section class="contenido-contacto" id="contacto">
-            <h2 class="titulo-secciones">Contacto</h2>
-            <p><strong>Teléfono:</strong><p>321 581 5090</p></p>
-            <p><strong>WhatsApp:</strong> <p>+57 321 581 5090</p></p>
-            <p><strong>Correo electrónico:</strong><a href="mailto:enfsanar@cliente.com" target="_blank"><p>enfsanar@cliente.com</p></a></p>    
-        </section>
+<body>
+    <div class="menu-head">
+        <div class="container menu">
+            <div>
+                <img src="Img/LogoImageWeb.png" alt="Image" width="60px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li> <a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="Login/login.php">Login</a></li>
+                </ul>
+
+            </nav>
+        </div>
+
+
     </div>
+
+
+    <section class="contenido-inicio container" id="inicio">
+
+        <div>
+            <img src="img/LogoImage.png" width="450px" alt="eslogan">
+        </div>
+        <div>
+            <p>
+                <h3>Sanando tus heridas, restaurando tu bienestar.</h3>
+                En EnfSanar SAS, entendemos que las heridas pueden afectar tanto física como emocionalmente.
+                Es por eso que nos dedicamos a brindar una atención integral y especializada para ayudarte a sanar por
+                completo.
+                Nuestro equipo multidisciplinario de expertos está aquí para ofrecerte el cuidado que necesitas en cada
+                paso del camino.
+            </p>
+        </div>
+    </section>
+    <hr>
+
+    <!--Seccion Servicios-->
+    <section class="contenido-servicios" id="servicios">
+        <div class="container">
+
+            <h2 class="titulo-secciones">Servicios</h2>
+            <p>
+                En EnfSanar SAS, nos especializamos en el tratamiento de una amplia gama de heridas de la piel y
+                subcutáneas. Nuestro equipo de expertos está dedicado a proporcionar la atención integral que necesitas
+                para una pronta recuperación. Algunos de nuestros servicios incluyen:
+                
+               <!--  </br></br>
+                - Evaluación y diagnóstico preciso.
+                </br></br>
+                - Tratamientos avanzados.
+                </br></br>
+                - Terapia de manejo del dolor.
+                </br></br>
+                - Educación y asesoramiento. -->
+            </p>
+            <ul>
+                <li>Evaluación y diagnóstico preciso.</li>
+                <li>Tratamientos avanzados.</li>
+                <li>Terapia de manejo del dolor.</li>
+            </ul>
+        </div>
+    </section>
+
+    <hr>
+    <!--Seccion Vision y Mision-->
+    <section class="contenido-nosotros container" id="nosotros">
+        <div>
+
+            <h2 class="titulo-secciones"> Nosotros </h2>
+            <p>
+                En EnfSanar SAS, nos guiamos por una clara misión y visión que define nuestro propósito y orienta
+                nuestras acciones hacia el futuro.
+            </p>
+            <div class="box-container">
+    
+                <div class="box">
+                    <h3>Mision</h3>
+                    <p>
+                        En EnfSanar SAS, nuestra misión es proporcionar un cuidado integral y especializado a pacientes
+                        que sufren de heridas de la piel y subcutáneas. Nos comprometemos a ofrecer tratamientos
+                        avanzados,
+                        personalizados y compasivos, con el objetivo de promover una cicatrización rápida y completa, y
+                        mejorar la calidad de vida de nuestros pacientes.
+                        Nos esforzamos por ser líderes en la atención de heridas, manteniendo los más altos estándares
+                        de excelencia médica,
+                        ética profesional y servicio al cliente.
+                    </p>
+                </div>
+                <div class="box">
+                    <h3>Vision</h3>
+                    <p>
+                        Nuestra visión es ser reconocidos como la clínica de referencia en el tratamiento de heridas,
+                        tanto a nivel local como nacional. Nos esforzamos por ser pioneros en la aplicación de
+                        tecnologías
+                        innovadoras y en el desarrollo de enfoques multidisciplinarios para el cuidado de heridas.
+                        Aspiramos a ser un centro de excelencia donde los pacientes encuentren esperanza, curación y
+                        apoyo
+                        integral para superar sus heridas y recuperar su bienestar físico, emocional y social.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Seccion Contacto-->
+    <footer class="contenido-contacto" id="contacto">
+        <div class="container">
+            <h2 class="titulo-secciones">Contacto</h2>
+            <p><strong>Teléfono:</strong>321 581 5090</p>
+            <p><strong>WhatsApp:</strong>+57 321 581 5090</p>
+            <p><strong>Correo electrónico:</strong></p>
+            <a href="mailto:enfsanar@cliente.com" target="_blank">enfsanar@cliente.com</a>
+            <h3>Copyrigt&COPY;2024<br><strong>Tsoftware</strong></h3>
+        </div>
+    </footer>
 
 </body>
+
 </html>
